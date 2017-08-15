@@ -1,9 +1,13 @@
 import { StackNavigator } from 'react-navigation';
 
-import Main from './components/Main';
+import IndexScreen from './containers/IndexScreen';
+import DetailScreen from './containers/DetailScreen';
 
-const BaseNavigation = StackNavigator({
-  Main: { screen: Main },
-});
+const routes = {
+  Index: { screen: IndexScreen },
+  Detail: { screen: DetailScreen },
+};
+
+const BaseNavigation = StackNavigator(routes);
 
 export default BaseNavigation;
