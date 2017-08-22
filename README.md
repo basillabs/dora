@@ -5,8 +5,6 @@ Simple react-native boilerplate for mobile development.
 1. Ensure you've followed the [React Native - Get Started Guide](https://facebook.github.io/react-native/docs/getting-started.html)
 1. Clone this project `git clone https://github.com/pcofilada/react-native-boilerplate.git`
 
-
-## Installation
 ## Installation
 
 1. Install [node.js](https://nodejs.org)
