@@ -11,11 +11,11 @@ export default function(state = defaultState, action = {}) {
     case SET_TOUR:
       return {
         ... state,
-        location: action.locations
+        locations: action.locations
       }
 
     case TOGGLE_LOCATION:
-      return state.map((location, index) => {
+      return state.locations.map((location, index) => {
         if (index === action.locationId) {
           return {
             ... location,

@@ -4,6 +4,7 @@ import {
 
 const defaultState = {
   locationId: 0,
+  completed: false,
 };
 
 export default function(state = defaultState, action = {}) {
