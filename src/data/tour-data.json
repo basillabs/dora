@@ -16,11 +16,12 @@
       "spiritualSignificance": "Deliciousness",
       "googleMapsParameter": "Vive la tarte",
       "locationImage": "http://frenchbydesign.frenchbydesign.netdna-cdn.com/wp-content/uploads/2015/12/vive-la-tarte_frenchbydesign_4.jpg",
-      "tasks": [{
+      "tasks": [
+        {
           "icon": " ",
-          "text": "Eat a tart here"
+          "text": "Eat a tart here."
         }
-      ],
+      ]
     },
     {
       "name": "Chez Maman",
@@ -28,7 +29,8 @@
       "spiritualSignificance": "We should pray for all the French people who come here.",
       "googleMapsParameter": "Chez Maman",
       "locationImage": "http://www.thejudge.ch/wp-content/uploads/2014/06/thejudge-LIP-HIMALAYA-1.jpg",
-      "tasks": [{
+      "tasks": [
+        {
           "icon": " ",
           "text": "Order some mussels."
         },
@@ -48,7 +50,8 @@
       "spiritualSignificance": "We should pray for all the people who come here to eat brunch.",
       "googleMapsParameter": "Sweet Maple",
       "locationImage": "http://media2.trover.com/T/55eb019ab0e9a61583009da9/fixedw_large_4x.jpg",
-      "tasks": [{
+      "tasks": [
+        {
           "icon": " ",
           "text": "Put your name on the list."
         },
@@ -68,7 +71,8 @@
       "spiritualSignificance": "This ice cream will change people's lives. Make sure to taste the monthly flavors, as well as the local ones.",
       "googleMapsParameter": "Salt & Straw",
       "locationImage": "https://hoodwork-production.s3.amazonaws.com/uploads/story/image/34298/Salt_and_Straw_Ice_Cream.jpeg",
-      "tasks": [{
+      "tasks": [
+        {
           "icon": " ",
           "text": "Stand in line."
         },
@@ -127,7 +131,6 @@
           "text": "Sit down and eat."
         }
       ]
-    },
-    ]
-  }]
+    }
+  ]
 }
