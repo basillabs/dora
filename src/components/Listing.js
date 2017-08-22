@@ -1,5 +1,5 @@
 import React, { PureComponent, PropTypes } from 'react';
-import { View, Text, FlatList, StyleSheet } from 'react-native';
+import { FlatList, StyleSheet } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
 
 
@@ -47,13 +47,13 @@ export default class Listing extends PureComponent {
       <List containerStyle={styles.container}>
         <FlatList
           data={this.state.data}
-          keyExtractor={(item) => item.name}
+          keyExtractor={item => item.name}
           renderItem={({ item }) => (
             <ListItem
               roundAvatar
               title={item.name}
-              containerStyle={{ borderBottomWidth: 0 }}
               onPress={() => this.props.onPress(item)}
+              containerStyle={styles.listItem}
             />
           )}
         />
@@ -64,6 +64,10 @@ export default class Listing extends PureComponent {
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: 20,
+    marginTop: 20,
+  },
+  listItem: {
+    borderBottomWidth: 1,
+    borderBottomColor: '#cbd2d9',
   },
 });

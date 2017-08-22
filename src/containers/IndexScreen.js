@@ -1,6 +1,7 @@
 import React, { PureComponent, PropTypes } from 'react';
-import { View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import Listing from '../components/Listing';
+import ListingImage from '../components/ListingImage';
 
 export default class IndexScreen extends PureComponent {
   static navigationOptions = {
@@ -17,7 +18,8 @@ export default class IndexScreen extends PureComponent {
 
   render() {
     return (
-      <View>
+      <View style={styles.container}>
+        <ListingImage />
         <Listing
           onPress={this.onPress}
         />
@@ -25,3 +27,9 @@ export default class IndexScreen extends PureComponent {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
