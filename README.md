@@ -4,8 +4,35 @@ Simple react-native boilerplate for mobile development.
 ## Getting Started
 1. Ensure you've followed the [React Native - Get Started Guide](https://facebook.github.io/react-native/docs/getting-started.html)
 1. Clone this project `git clone https://github.com/pcofilada/react-native-boilerplate.git`
-1. Run `npm install` from root directory
-1. Start the app in [an emulator](/docs/quick-tips.md#running-in-an-emulator)
+
+
+## Installation
+## Installation
+
+1. Install [node.js](https://nodejs.org)
+2. Install Xcode and run it once to install command line tools
+3. Install React Native's CLI (`npm install -g react-native-cli`)
+4. Install project dependencies
+
+```bash
+npm install
+```
+
+Or (optional) install and use [yarn](https://yarnpkg.com) for faster package management
+
+```bash
+yarn install
+```
+
+5. Start the app in [an emulator](/docs/quick-tips.md#running-in-an-emulator)
+
+```bash
+npm run ios
+```
+
+```bash
+npm run android
+```
 
 ## Stack
 - [React Native](https://facebook.github.io/react-native/) for building mobile apps using Javascript
