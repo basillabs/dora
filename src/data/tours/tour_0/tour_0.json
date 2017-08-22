@@ -14,7 +14,10 @@
       "name": "vive la tarte",
       "summary": "Lofty, industrial-chic Belgian bakery with an open kitchen for tarts, plus coffee, tea & juice.",
       "spiritualSignificance": "Deliciousness",
-      "googleMapsParameter": "Vive la tarte",
+      "googleMapsParameter": {
+        "name": "Vive la tarte",
+        "address": "1160 Howard St, San Francisco, CA 94103"
+      },
       "locationImage": "http://frenchbydesign.frenchbydesign.netdna-cdn.com/wp-content/uploads/2015/12/vive-la-tarte_frenchbydesign_4.jpg",
       "tasks": [
         {
@@ -27,7 +30,10 @@
       "name": "Chez Maman",
       "summary": "Cozy, informal eatery serving French bistro classics ranging from burgers & crêpes to mussels.",
       "spiritualSignificance": "We should pray for all the French people who come here.",
-      "googleMapsParameter": "Chez Maman",
+      "googleMapsParameter": {
+        "name": "Chez Maman",
+        "address": "401 Gough St, San Francisco, CA 94102"
+      },
       "locationImage": "http://www.thejudge.ch/wp-content/uploads/2014/06/thejudge-LIP-HIMALAYA-1.jpg",
       "tasks": [
         {
@@ -48,7 +54,10 @@
       "name": "Sweet Maple",
       "summary": "Local spot for homemade morning/lunch fare like signature brown-sugar-glazed 'millionaire’s bacon.'",
       "spiritualSignificance": "We should pray for all the people who come here to eat brunch.",
-      "googleMapsParameter": "Sweet Maple",
+      "googleMapsParameter": {
+        "name": "Sweet Maple",
+        "address": "2101 Sutter St, San Francisco, CA 94115"
+      },
       "locationImage": "http://media2.trover.com/T/55eb019ab0e9a61583009da9/fixedw_large_4x.jpg",
       "tasks": [
         {
@@ -69,7 +78,10 @@
       "name": "Salt&Straw",
       "summary": "Quirky flavors & handmade waffle cones draw crowds to this artisanal ice cream maker.",
       "spiritualSignificance": "This ice cream will change people's lives. Make sure to taste the monthly flavors, as well as the local ones.",
-      "googleMapsParameter": "Salt & Straw",
+      "googleMapsParameter": {
+        "name": "Salt & Straw",
+        "address": "2201 Fillmore St, San Francisco, CA 94115"
+      },
       "locationImage": "https://hoodwork-production.s3.amazonaws.com/uploads/story/image/34298/Salt_and_Straw_Ice_Cream.jpeg",
       "tasks": [
         {
@@ -102,7 +114,10 @@
       "name": "Mr. Holmes Bakehouse",
       "summary": "Bakery serving a mix of tarts, donuts & croissant-muffins, plus coffee in a cozy, bright space.",
       "spiritualSignificance": "Pray the cruffins haven't run out.",
-      "googleMapsParameter": "Mr. Holmes Bakehouse",
+      "googleMapsParameter": {
+        "name": "Mr. Holmes Bakehouse",
+        "address": "1042 Larkin St, San Francisco, CA 94109"
+      },
       "locationImage": "https://media1.popsugar-assets.com/files/thumbor/aSlYXL8azfB0bOFkPVVba-TtCSk/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2015/02/11/985/n/1922195/c072e1e7f7fbc1c0_neon-/i/I-Got-Baked-San-Francisco.jpg",
       "tasks": [
         {
@@ -119,7 +134,10 @@
       "name": "Trestle",
       "summary": "New American restaurant offering 3-course fixed-price meals in a quaint space with modern flair.",
       "spiritualSignificance": "Pray people have enough money to give to the kingdom after eating here.",
-      "googleMapsParameter": "Trestle",
+      "googleMapsParameter": {
+        "name": "Trestle",
+        "address": "531 Jackson St, San Francisco, CA 94111"
+      },
       "locationImage": "http://cyneats.com/wp-content/uploads/2015/07/DSCF9661-1024x683.jpg",
       "tasks": [
         {
