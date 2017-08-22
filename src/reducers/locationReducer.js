@@ -9,9 +9,10 @@ const defaultState = {
 export default function(state = defaultState, action = {}) {
   switch (action.type) {
     case SET_LOCATION:
-      return Object.assign({}, state, {
-        locationId: action.locationId,
-      });
+      return {
+        ... state,
+        completed: !location.completed,
+      };
     default:
       return state;
   }
