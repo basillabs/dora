@@ -1,5 +1,6 @@
 import React, { PureComponent, PropTypes } from 'react';
-import { View, Button } from 'react-native';
+import { View } from 'react-native';
+import Listing from '../components/Listing';
 
 export default class IndexScreen extends PureComponent {
   static navigationOptions = {
@@ -10,14 +11,16 @@ export default class IndexScreen extends PureComponent {
     navigation: PropTypes.object.isRequired,
   }
 
-  onPress = () => {
-    this.props.navigation.navigate('Detail');
+  onPress = (place) => {
+    this.props.navigation.navigate('Detail', { place });
   }
 
   render() {
     return (
       <View>
-        <Button onPress={this.onPress} title="Go to detail" />
+        <Listing
+          onPress={this.onPress}
+        />
       </View>
     );
   }
