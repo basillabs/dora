@@ -3,33 +3,131 @@
   "tourName": "San Francisco",
   "tourDuration": "102",
   "mapImagesList": [
-    "",
-    "",
-    "http://media2.trover.com/T/55eb019ab0e9a61583009da9/fixedw_large_4x.jpg",
-    "https://hoodwork-production.s3.amazonaws.com/uploads/story/image/34298/Salt_and_Straw_Ice_Cream.jpeg",
-    "https://media1.popsugar-assets.com/files/thumbor/aSlYXL8azfB0bOFkPVVba-TtCSk/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2015/02/11/985/n/1922195/c072e1e7f7fbc1c0_neon-/i/I-Got-Baked-San-Francisco.jpg",
-    "http://cyneats.com/wp-content/uploads/2015/07/DSCF9661-1024x683.jpg"
+    "vivelatarte",
+    "ChezMaman",
+    "SweetMaple",
+    "Salt&Straw",
+    "holmes",
+    "trestle"
   ],
   "locations": [{
-    "name": "vive la tarte",
-    "summary": "Lofty, industrial-chic Belgian bakery with an open kitchen for tarts, plus coffee, tea & juice.",
-    "spiritualSignificance": "Deliciousness",
-    "googleMapsParameter": "Vive la tarte",
-    "locationImage": "http://frenchbydesign.frenchbydesign.netdna-cdn.com/wp-content/uploads/2015/12/vive-la-tarte_frenchbydesign_4.jpg",
-    "tasks": [{
-      "icon": " ",
-      "text": "Eat a tart here"
-      },
-  {
-    "name": "Chez Maman",
-    "summary": "Restaurant",
-    "spiritualSignificance": "We should pray for all the French people who come here.",
-    "googleMapsParameter": "Chez Maman",
-    "locationImage": "http://www.thejudge.ch/wp-content/uploads/2014/06/thejudge-LIP-HIMALAYA-1.jpg",
-    "tasks": [{
-      "icon": " ",
-      "text": "Eat a tart here"
-      },
+      "name": "vive la tarte",
+      "summary": "Lofty, industrial-chic Belgian bakery with an open kitchen for tarts, plus coffee, tea & juice.",
+      "spiritualSignificance": "Deliciousness",
+      "googleMapsParameter": "Vive la tarte",
+      "locationImage": "http://frenchbydesign.frenchbydesign.netdna-cdn.com/wp-content/uploads/2015/12/vive-la-tarte_frenchbydesign_4.jpg",
+      "tasks": [{
+          "icon": " ",
+          "text": "Eat a tart here"
+        }
+      ],
+    },
+    {
+      "name": "Chez Maman",
+      "summary": "Cozy, informal eatery serving French bistro classics ranging from burgers & crêpes to mussels.",
+      "spiritualSignificance": "We should pray for all the French people who come here.",
+      "googleMapsParameter": "Chez Maman",
+      "locationImage": "http://www.thejudge.ch/wp-content/uploads/2014/06/thejudge-LIP-HIMALAYA-1.jpg",
+      "tasks": [{
+          "icon": " ",
+          "text": "Order some mussels."
+        },
+        {
+          "icon": " ",
+          "text": "Order a burger."
+        },
+        {
+          "icon": " ",
+          "text": "Pay the bill."
+        }
+      ]
+    },
+    {
+      "name": "Sweet Maple",
+      "summary": "Local spot for homemade morning/lunch fare like signature brown-sugar-glazed 'millionaire’s bacon.'",
+      "spiritualSignificance": "We should pray for all the people who come here to eat brunch.",
+      "googleMapsParameter": "Sweet Maple",
+      "locationImage": "http://media2.trover.com/T/55eb019ab0e9a61583009da9/fixedw_large_4x.jpg",
+      "tasks": [{
+          "icon": " ",
+          "text": "Put your name on the list."
+        },
+        {
+          "icon": " ",
+          "text": "Order an eggs benedict."
+        },
+        {
+          "icon": " ",
+          "text": "Instagram your brunch."
+        }
+      ]
+    },
+    {
+      "name": "Salt&Straw",
+      "summary": "Quirky flavors & handmade waffle cones draw crowds to this artisanal ice cream maker.",
+      "spiritualSignificance": "This ice cream will change people's lives. Make sure to taste the monthly flavors, as well as the local ones.",
+      "googleMapsParameter": "Salt & Straw",
+      "locationImage": "https://hoodwork-production.s3.amazonaws.com/uploads/story/image/34298/Salt_and_Straw_Ice_Cream.jpeg",
+      "tasks": [{
+          "icon": " ",
+          "text": "Stand in line."
+        },
+        {
+          "icon": " ",
+          "text": "Taste all of the ice cream."
+        },
+        {
+          "icon": " ",
+          "text": "Order your favorite flavor."
+        },
+        {
+          "icon": " ",
+          "text": "Tip the ice cream scooper."
+        },
+        {
+          "icon": " ",
+          "text": "Eat your ice cream before it melts."
+        },
+        {
+          "icon": " ",
+          "text": "Tell all your friends about this place."
+        }
+      ]
+    },
+    {
+      "name": "Mr. Holmes Bakehouse",
+      "summary": "Bakery serving a mix of tarts, donuts & croissant-muffins, plus coffee in a cozy, bright space.",
+      "spiritualSignificance": "Pray the cruffins haven't run out.",
+      "googleMapsParameter": "Mr. Holmes Bakehouse",
+      "locationImage": "https://media1.popsugar-assets.com/files/thumbor/aSlYXL8azfB0bOFkPVVba-TtCSk/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2015/02/11/985/n/1922195/c072e1e7f7fbc1c0_neon-/i/I-Got-Baked-San-Francisco.jpg",
+      "tasks": [
+        {
+          "icon": " ",
+          "text": "Get there early."
+        },
+        {
+          "icon": " ",
+          "text": "Order your cruffin and take a picture of it with the sign, then post on social media."
+        }
+      ]
+    },
+    {
+      "name": "Trestle",
+      "summary": "New American restaurant offering 3-course fixed-price meals in a quaint space with modern flair.",
+      "spiritualSignificance": "Pray people have enough money to give to the kingdom after eating here.",
+      "googleMapsParameter": "Trestle",
+      "locationImage": "http://cyneats.com/wp-content/uploads/2015/07/DSCF9661-1024x683.jpg",
+      "tasks": [
+        {
+          "icon": " ",
+          "text": "Make a reservation."
+        },
+        {
+          "icon": " ",
+          "text": "Sit down and eat."
+        }
+      ]
+    },
     ]
   }]
 }
