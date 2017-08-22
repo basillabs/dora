@@ -4,6 +4,8 @@ import {
 
 const defaultState = {
   tourId: 0,
+  tour: {}
+  locations: []
 };
 
 export default function (state = defaultState, action = {}) {
@@ -11,6 +13,8 @@ export default function (state = defaultState, action = {}) {
     case SET_TOUR:
       return Object.assign({}, state, {
         tourId: action.tourId,
+        tour: action.tour,
+        locations: action.locations
       });
     default:
       return state;
