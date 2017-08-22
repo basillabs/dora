@@ -2,14 +2,6 @@
   "tourId": "0",
   "tourName": "San Francisco",
   "tourDuration": "102",
-  "mapImagesList": [
-    "images/location_01.png",
-    "images/location_02.png",
-    "images/location_03.png",
-    "images/location_04.png",
-    "images/location_05.png",
-    "images/location_06.png"
-  ],
   "locations": [{
       "name": "vive la tarte",
       "summary": "Lofty, industrial-chic Belgian bakery with an open kitchen for tarts, plus coffee, tea & juice.",
