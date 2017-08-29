@@ -4,14 +4,16 @@ import {
 
 const defaultState = {
   locationId: 0,
+  completed: false,
 };
 
-export default function(state = defaultState, action = {}) {
+export default function (state = defaultState, action = {}) {
   switch (action.type) {
     case SET_LOCATION:
-      return Object.assign({}, state, {
-        locationId: action.locationId,
-      });
+      return {
+        ...state,
+        locationId: !action.locationId,
+      };
     default:
       return state;
   }
