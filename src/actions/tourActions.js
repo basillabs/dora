@@ -5,14 +5,14 @@ import {
 const TOUR_0 = require('../data/tours/tour_0/tour.json');
 
 export default function setTour(tourId) {
-  // eslint-disable-line rule-name
-  const tour = JSON.parse(TOUR_0);
-  const locations = tour.locations;
+  return function(dispatch) {
+    const locations = TOUR_0.locations;
 
-  return {
-    type: SET_TOUR,
-    tourId,
-    tour,
-    locations,
+    dispatch({
+      type: SET_TOUR,
+      tourId,
+      tour: TOUR_0,
+      locations,
+    });
   };
 }

@@ -2,32 +2,10 @@ import React, { PureComponent, PropTypes } from 'react';
 import { FlatList, StyleSheet } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
 
-
-const data = [
-  {
-    name: 'place a',
-  },
-  {
-    name: 'place b',
-  },
-  {
-    name: 'place c',
-  },
-  {
-    name: 'place d',
-  },
-  {
-    name: 'place e',
-  },
-  {
-    name: 'place f',
-  },
-];
-
-
 export default class Listing extends PureComponent {
   static propTypes = {
     onPress: PropTypes.func.isRequired,
+    list: PropTypes.array.isRequired,
   };
 
   static defaultProps = {
@@ -38,7 +16,7 @@ export default class Listing extends PureComponent {
     super(props);
 
     this.state = {
-      data,
+      data: props.list,
     };
   }
 
