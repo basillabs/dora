@@ -11,7 +11,7 @@ export default function (state = defaultState, action = {}) {
   switch (action.type) {
     case SET_TOUR:
       return {
-        ... state,
+        ...state,
         tourId: action.tourId,
         tour: action.tour,
       };

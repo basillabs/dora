@@ -6,12 +6,12 @@ const defaultState = {
   locationId: 0,
 };
 
-export default function(state = defaultState, action = {}) {
+export default function (state = defaultState, action = {}) {
   switch (action.type) {
     case SET_LOCATION:
       return {
-        ... state,
-        completed: !location.completed,
+        ...state,
+        locationId: !action.locationId,
       };
     default:
       return state;
