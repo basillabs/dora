@@ -10,7 +10,7 @@
         "name": "Vive la tarte",
         "address": "1160 Howard St, San Francisco, CA 94103"
       },
-      "locationImage": "http://frenchbydesign.frenchbydesign.netdna-cdn.com/wp-content/uploads/2015/12/vive-la-tarte_frenchbydesign_4.jpg",
+      "locationImage": "images/vive-la-tarte.jpg",
       "tasks": [
         {
           "icon": " ",
@@ -26,7 +26,7 @@
         "name": "Chez Maman",
         "address": "401 Gough St, San Francisco, CA 94102"
       },
-      "locationImage": "http://www.thejudge.ch/wp-content/uploads/2014/06/thejudge-LIP-HIMALAYA-1.jpg",
+      "locationImage": "images/chez-maman.jpg",
       "tasks": [
         {
           "icon": " ",
@@ -50,7 +50,7 @@
         "name": "Sweet Maple",
         "address": "2101 Sutter St, San Francisco, CA 94115"
       },
-      "locationImage": "http://media2.trover.com/T/55eb019ab0e9a61583009da9/fixedw_large_4x.jpg",
+      "locationImage": "images/sweet-maple.jpg",
       "tasks": [
         {
           "icon": " ",
@@ -74,7 +74,7 @@
         "name": "Salt & Straw",
         "address": "2201 Fillmore St, San Francisco, CA 94115"
       },
-      "locationImage": "https://hoodwork-production.s3.amazonaws.com/uploads/story/image/34298/Salt_and_Straw_Ice_Cream.jpeg",
+      "locationImage": "images/salt-and-straw.jpeg",
       "tasks": [
         {
           "icon": " ",
@@ -110,7 +110,7 @@
         "name": "Mr. Holmes Bakehouse",
         "address": "1042 Larkin St, San Francisco, CA 94109"
       },
-      "locationImage": "https://media1.popsugar-assets.com/files/thumbor/aSlYXL8azfB0bOFkPVVba-TtCSk/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2015/02/11/985/n/1922195/c072e1e7f7fbc1c0_neon-/i/I-Got-Baked-San-Francisco.jpg",
+      "locationImage": "images/mr-holmes-bakehouse.jpg",
       "tasks": [
         {
           "icon": " ",
@@ -130,7 +130,7 @@
         "name": "Trestle",
         "address": "531 Jackson St, San Francisco, CA 94111"
       },
-      "locationImage": "http://cyneats.com/wp-content/uploads/2015/07/DSCF9661-1024x683.jpg",
+      "locationImage": "images/trestle.jpg",
       "tasks": [
         {
           "icon": " ",
