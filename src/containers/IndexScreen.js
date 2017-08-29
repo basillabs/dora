@@ -9,7 +9,7 @@ const mapStateToProps = state => ({
 });
 
 
-export class IndexScreen extends PureComponent {
+class IndexScreen extends PureComponent {
   static navigationOptions = {
     title: 'Index',
   }
