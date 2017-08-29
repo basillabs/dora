@@ -12,25 +12,22 @@ export default class Listing extends PureComponent {
 
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      data: props.list,
-    };
-  }
-
   render() {
+    const {
+      list,
+      onPress,
+    } = this.props;
+
     return (
       <List containerStyle={styles.container}>
         <FlatList
-          data={this.state.data}
+          data={list}
           keyExtractor={item => item.name}
           renderItem={({ item }) => (
             <ListItem
               roundAvatar
               title={item.name}
-              onPress={() => this.props.onPress(item)}
+              onPress={() => onPress(item)}
               containerStyle={styles.listItem}
             />
           )}
