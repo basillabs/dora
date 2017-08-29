@@ -12,7 +12,7 @@ export default function (state = defaultState, action = {}) {
     case SET_TOUR:
       return {
         ...state,
-        location: action.locations,
+        locations: action.locations,
       };
 
     case TOGGLE_LOCATION:
