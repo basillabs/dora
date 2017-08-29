@@ -2,57 +2,32 @@ import React, { PureComponent, PropTypes } from 'react';
 import { FlatList, StyleSheet } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
 
-
-const data = [
-  {
-    name: 'place a',
-  },
-  {
-    name: 'place b',
-  },
-  {
-    name: 'place c',
-  },
-  {
-    name: 'place d',
-  },
-  {
-    name: 'place e',
-  },
-  {
-    name: 'place f',
-  },
-];
-
-
 export default class Listing extends PureComponent {
   static propTypes = {
     onPress: PropTypes.func.isRequired,
+    list: PropTypes.array.isRequired,
   };
 
   static defaultProps = {
 
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      data,
-    };
-  }
-
   render() {
+    const {
+      list,
+      onPress,
+    } = this.props;
+
     return (
       <List containerStyle={styles.container}>
         <FlatList
-          data={this.state.data}
+          data={list}
           keyExtractor={item => item.name}
           renderItem={({ item }) => (
             <ListItem
               roundAvatar
               title={item.name}
-              onPress={() => this.props.onPress(item)}
+              onPress={() => onPress(item)}
               containerStyle={styles.listItem}
             />
           )}
