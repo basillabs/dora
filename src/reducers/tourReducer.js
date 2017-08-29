@@ -4,14 +4,17 @@ import {
 
 const defaultState = {
   tourId: 0,
+  tour: {},
 };
 
 export default function (state = defaultState, action = {}) {
   switch (action.type) {
     case SET_TOUR:
-      return Object.assign({}, state, {
+      return {
+        ...state,
         tourId: action.tourId,
-      });
+        tour: action.tour,
+      };
     default:
       return state;
   }
