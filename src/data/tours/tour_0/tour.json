@@ -4,121 +4,106 @@
   "tourDuration": "102",
   "locations": [{
       "name": "vive la tarte",
-      "summary": "Lofty, industrial-chic Belgian bakery with an open kitchen for tarts, plus coffee, tea & juice.",
-      "spiritualSignificance": "Deliciousness",
+      "short_address": "1160 Howard St",
       "googleMapsParameter": {
         "name": "Vive la tarte",
         "address": "1160 Howard St, San Francisco, CA 94103"
       },
       "locationImage": "images/vive-la-tarte.jpg",
-      "tasks": [
+      "thumbnail": "images/vive-la-tarte.jpg",
+      "details": [
         {
-          "icon": " ",
-          "text": "Eat a tart here."
+          "title": "Overview",
+          "text": "Lofty, industrial-chic Belgian bakery with an open kitchen for tarts, plus coffee, tea & juice.",
+          "carousel": [
+              "images/vive-la-tarte.jpg",
+              "images/vive-la-tarte.jpg",
+              "images/vive-la-tarte.jpg"
+          ]
+        },
+        {
+          "title": "Spiritual Needs",
+          "text": "Eat a tart here too. Deliciousness."
         }
       ]
     },
     {
       "name": "Chez Maman",
-      "summary": "Cozy, informal eatery serving French bistro classics ranging from burgers & crêpes to mussels.",
-      "spiritualSignificance": "We should pray for all the French people who come here.",
+      "short_address": "401 Gough St",
       "googleMapsParameter": {
         "name": "Chez Maman",
         "address": "401 Gough St, San Francisco, CA 94102"
       },
       "locationImage": "images/chez-maman.jpg",
-      "tasks": [
+      "thumbnail": "images/chez-maman.jpg",
+      "details": [
         {
-          "icon": " ",
-          "text": "Order some mussels."
+          "title": "Overview",
+          "text": "Cozy, informal eatery serving French bistro classics ranging from burgers & crêpes to mussels."
         },
         {
-          "icon": " ",
-          "text": "Order a burger."
-        },
-        {
-          "icon": " ",
-          "text": "Pay the bill."
+          "title": "Spiritual Needs",
+          "text": "We should pray for all the French people who come here. Order some mussels. Order a burger. Pay the bill."
         }
       ]
     },
     {
       "name": "Sweet Maple",
-      "summary": "Local spot for homemade morning/lunch fare like signature brown-sugar-glazed 'millionaire’s bacon.'",
-      "spiritualSignificance": "We should pray for all the people who come here to eat brunch.",
+      "short_address": "2101 Sutter St",
       "googleMapsParameter": {
         "name": "Sweet Maple",
         "address": "2101 Sutter St, San Francisco, CA 94115"
       },
       "locationImage": "images/sweet-maple.jpg",
-      "tasks": [
+      "thumbnail": "images/sweet-maple.jpg",
+      "details": [
         {
-          "icon": " ",
-          "text": "Put your name on the list."
+          "title": "Overview",
+          "text": "Local spot for homemade morning/lunch fare like signature brown-sugar-glazed 'millionaire’s bacon.'"
         },
         {
-          "icon": " ",
-          "text": "Order an eggs benedict."
-        },
-        {
-          "icon": " ",
-          "text": "Instagram your brunch."
+          "title": "Spiritual Needs",
+          "text": "We should pray for all the people who come here to eat brunch. Put your name on the list. Order an eggs benedict. Instagram your brunch."
         }
       ]
     },
     {
       "name": "Salt&Straw",
-      "summary": "Quirky flavors & handmade waffle cones draw crowds to this artisanal ice cream maker.",
-      "spiritualSignificance": "This ice cream will change people's lives. Make sure to taste the monthly flavors, as well as the local ones.",
+      "short_address": "2201 Fillmore St",
       "googleMapsParameter": {
         "name": "Salt & Straw",
         "address": "2201 Fillmore St, San Francisco, CA 94115"
       },
       "locationImage": "images/salt-and-straw.jpeg",
-      "tasks": [
+      "thumbnail": "images/salt-and-straw.jpeg",
+      "details": [
         {
-          "icon": " ",
-          "text": "Stand in line."
+          "title": "Overview",
+          "text": "Quirky flavors & handmade waffle cones draw crowds to this artisanal ice cream maker."
         },
         {
-          "icon": " ",
-          "text": "Taste all of the ice cream."
-        },
-        {
-          "icon": " ",
-          "text": "Order your favorite flavor."
-        },
-        {
-          "icon": " ",
-          "text": "Tip the ice cream scooper."
-        },
-        {
-          "icon": " ",
-          "text": "Eat your ice cream before it melts."
-        },
-        {
-          "icon": " ",
-          "text": "Tell all your friends about this place."
+          "title": "Spiritual Needs",
+          "text": "This ice cream will change people's lives. Make sure to taste the monthly flavors, as well as the local ones. Stand in line. Taste all of the ice cream. Order your favorite flavor. Tip the ice cream scooper. Eat your ice cream before it melts. Tell all your friends about this place."
         }
       ]
     },
     {
       "name": "Mr. Holmes Bakehouse",
-      "summary": "Bakery serving a mix of tarts, donuts & croissant-muffins, plus coffee in a cozy, bright space.",
-      "spiritualSignificance": "Pray the cruffins haven't run out.",
+      "short_address": "1042 Larkin St",
       "googleMapsParameter": {
         "name": "Mr. Holmes Bakehouse",
         "address": "1042 Larkin St, San Francisco, CA 94109"
       },
       "locationImage": "images/mr-holmes-bakehouse.jpg",
-      "tasks": [
+      "thumbnail": "images/mr-holmes-bakehouse.jpg",
+      "details": [
         {
-          "icon": " ",
-          "text": "Get there early."
+          "title": "Overview",
+          "text": "Bakery serving a mix of tarts, donuts & croissant-muffins, plus coffee in a cozy, bright space."
         },
         {
-          "icon": " ",
-          "text": "Order your cruffin and take a picture of it with the sign, then post on social media."
+          "title": "Spiritual Needs",
+          "text": "Pray the cruffins haven't run out. Get there early. Order your cruffin and take a picture of it with the sign, then post on social media."
         }
       ]
     },
@@ -126,19 +111,21 @@
       "name": "Trestle",
       "summary": "New American restaurant offering 3-course fixed-price meals in a quaint space with modern flair.",
       "spiritualSignificance": "Pray people have enough money to give to the kingdom after eating here.",
+      "short_address": "531 Jackson St",
       "googleMapsParameter": {
         "name": "Trestle",
         "address": "531 Jackson St, San Francisco, CA 94111"
       },
       "locationImage": "images/trestle.jpg",
-      "tasks": [
+      "thumbnail": "images/trestle.jpg",
+      "details": [
         {
-          "icon": " ",
-          "text": "Make a reservation."
+          "title": "Overview",
+          "text": "New American restaurant offering 3-course fixed-price meals in a quaint space with modern flair."
         },
         {
-          "icon": " ",
-          "text": "Sit down and eat."
+          "title": "Spiritual Needs",
+          "text": "Pray people have enough money to give to the kingdom after eating here. Make a reservation. Sit down and eat."
         }
       ]
     }
