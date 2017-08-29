@@ -16,7 +16,7 @@ export default function (state = defaultState, action = {}) {
       };
 
     case TOGGLE_LOCATION:
-      return state.map((location, index) => {
+      return state.locations.map((location, index) => {
         if (index === action.locationId) {
           return {
             ...location,
