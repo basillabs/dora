@@ -7,6 +7,12 @@ import {
 } from 'react-native';
 import Card from '../components/Card';
 import { requireImage } from '../constants/Images';
+import {
+  BACKGROUND,
+  BLACK_MESSAGE,
+  BLACK_TITLE,
+  CYAN,
+} from '../constants/colorConstants';
 
 class DetailScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
@@ -30,9 +36,14 @@ class DetailScreen extends Component {
   renderDetails(details) {
     return details.map((detail) => {
       return (
-        <View>
-          <Text>{detail.title}</Text>
-          <Text>{detail.text}</Text>
+        <View style={styles.detailsContainer}>
+          <Text style={styles.title}>
+            {detail.title}
+          </Text>
+          <View style={styles.halfBorder} />
+          <Text style={styles.text}>
+            {detail.text}
+        </Text>
           {this.renderCarousel(detail.carousel)}
         </View>
       )
@@ -62,7 +73,33 @@ class DetailScreen extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    backgroundColor: BACKGROUND,
+    flex: 1,
+  },
+  detailsContainer: {
+    marginTop: 20,
+  },
+  title: {
+    color: BLACK_TITLE,
+    fontSize: 24,
+    lineHeight: 40,
+    marginLeft: 20,
+    marginRight: 20,
+  },
+  halfBorder: {
+    backgroundColor: CYAN,
+    width: 40,
+    height: 2,
+    marginLeft: 20,
+    marginTop: 4,
+  },
+  text: {
+    color: BLACK_MESSAGE,
+    fontSize: 16,
+    lineHeight: 20,
+    margin: 20,
+  }
 });
 
 export default DetailScreen;
