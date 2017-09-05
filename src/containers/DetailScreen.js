@@ -5,13 +5,24 @@ import Card from '../components/Card';
 class DetailScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
     title: navigation.state.params.place.detail,
-  })
+  });
 
   render() {
+    console.log(this.props);
+    const {
+      name,
+      short_address,
+      googleMapsParameter,
+      locationImage,
+      thumbnail,
+      details,
+    } = this.props.navigation.state.params.place;
     return (
       <View style={styles.container}>
-        <Text>Place detail</Text>
-        <Card />
+        <Card
+          imageName={locationImage}
+          title={name}
+        />
       </View>
     );
   }
