@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {
+  FlatList,
   Image,
   StyleSheet,
   Text,
@@ -20,17 +21,24 @@ class DetailScreen extends Component {
   });
 
   renderCarousel(carousel) {
-    // TODO: do it properly with a lightbox or something
     if (!carousel) {
       return;
     }
-    return carousel.map((image) => {
-        return (
-          <Image
-            source={requireImage(image)}
-          />
-        )
+    images = carousel.map((image) => {
+      return { key: image };
     });
+    return (
+      <FlatList
+        style={styles.carouselContainer}
+        data={images}
+        renderItem={({item}) =>
+          <Image style={styles.carouselImage}
+            source={requireImage(item.key)}
+          />
+        }
+        horizontal
+      />
+    );
   }
 
   renderDetails(details) {
@@ -99,7 +107,15 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 20,
     margin: 20,
-  }
+  },
+  carouselContainer: {
+    marginLeft: 20,
+  },
+  carouselImage: {
+    height: 80,
+    width: 120,
+    marginRight: 20,
+  },
 });
 
 export default DetailScreen;
