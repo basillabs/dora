@@ -4,6 +4,7 @@ import {
 
 const defaultState = {
   tourId: 0,
+  currentLocation: 2,
   tour: {},
 };
 

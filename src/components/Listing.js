@@ -6,6 +6,7 @@ export default class Listing extends PureComponent {
   static propTypes = {
     onPress: PropTypes.func.isRequired,
     list: PropTypes.array.isRequired,
+    currentLocation: PropTypes.number.isRequired,
   };
 
   static defaultProps = {
@@ -19,30 +20,38 @@ export default class Listing extends PureComponent {
     } = this.props;
 
     return (
-      <List containerStyle={styles.container}>
-        <FlatList
-          data={list}
-          keyExtractor={item => item.name}
-          renderItem={({ item }) => (
-            <ListItem
-              roundAvatar
-              title={item.name}
-              onPress={() => onPress(item)}
-              containerStyle={styles.listItem}
-            />
-          )}
-        />
-      </List>
+      <FlatList
+        data={list}
+        keyExtractor={item => item.name}
+        containerStyle={styles.container}
+        renderItem={({ item, index }) => (
+          <ListItem
+            roundAvatar
+            title={item.name}
+            onPress={() => onPress(item)}
+            containerStyle={[
+              styles.listItem,
+              this.props.currentLocation > index && styles.completed
+            ]}
+          />
+        )}
+      />
     );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 20,
+
   },
+
+  completed: {
+    backgroundColor: "gray",
+  },
+
   listItem: {
     borderBottomWidth: 1,
     borderBottomColor: '#cbd2d9',
+    backgroundColor: "white",
   },
 });

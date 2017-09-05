@@ -4,7 +4,6 @@ import { View, StyleSheet } from 'react-native';
 import Listing from '../components/Listing';
 import ListingImage from '../components/ListingImage';
 import TourSummary from '../components/TourSummary';
-import { requireImage } from '../constants/Images';
 
 const mapStateToProps = state => ({
   list: state.locationListReducer.locations,
@@ -21,8 +20,6 @@ class IndexScreen extends PureComponent {
   static propTypes = {
     navigation: PropTypes.object.isRequired,
     list: PropTypes.array.isRequired,
-    currentLocation: PropTypes.number.isRequired,
-    tourId: PropTypes.number.isRequired,
   }
 
   onPress = (place) => {
@@ -30,7 +27,7 @@ class IndexScreen extends PureComponent {
   }
 
   tourRequireImage = (imageName) => {
-    return requireImage(`tour_${this.props.tourId}/${imageName}`);
+    requireImage(`tour_${this.props.tourId}/${imageName}`);
   }
 
   render() {
@@ -42,7 +39,6 @@ class IndexScreen extends PureComponent {
         />
         <TourSummary />
         <Listing
-          currentLocation={this.props.currentLocation}
           list={this.props.list}
           tourRequireImage={this.tourRequireImage}
           onPress={this.onPress}
