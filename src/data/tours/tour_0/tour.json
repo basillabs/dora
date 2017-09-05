@@ -9,16 +9,16 @@
         "name": "Vive la tarte",
         "address": "1160 Howard St, San Francisco, CA 94103"
       },
-      "locationImage": "images/vive-la-tarte.jpg",
-      "thumbnail": "images/vive-la-tarte.jpg",
+      "locationImage": "vive-la-tarte",
+      "thumbnail": "vive-la-tarte",
       "details": [
         {
           "title": "Overview",
           "text": "Lofty, industrial-chic Belgian bakery with an open kitchen for tarts, plus coffee, tea & juice.",
           "carousel": [
-              "images/vive-la-tarte.jpg",
-              "images/vive-la-tarte.jpg",
-              "images/vive-la-tarte.jpg"
+              "vive-la-tarte",
+              "vive-la-tarte",
+              "vive-la-tarte"
           ]
         },
         {
@@ -34,8 +34,8 @@
         "name": "Chez Maman",
         "address": "401 Gough St, San Francisco, CA 94102"
       },
-      "locationImage": "images/chez-maman.jpg",
-      "thumbnail": "images/chez-maman.jpg",
+      "locationImage": "chez-maman",
+      "thumbnail": "chez-maman",
       "details": [
         {
           "title": "Overview",
@@ -54,8 +54,8 @@
         "name": "Sweet Maple",
         "address": "2101 Sutter St, San Francisco, CA 94115"
       },
-      "locationImage": "images/sweet-maple.jpg",
-      "thumbnail": "images/sweet-maple.jpg",
+      "locationImage": "sweet-maple",
+      "thumbnail": "sweet-maple",
       "details": [
         {
           "title": "Overview",
@@ -74,8 +74,8 @@
         "name": "Salt & Straw",
         "address": "2201 Fillmore St, San Francisco, CA 94115"
       },
-      "locationImage": "images/salt-and-straw.jpeg",
-      "thumbnail": "images/salt-and-straw.jpeg",
+      "locationImage": "salt-and-straw",
+      "thumbnail": "salt-and-straw",
       "details": [
         {
           "title": "Overview",
@@ -94,8 +94,8 @@
         "name": "Mr. Holmes Bakehouse",
         "address": "1042 Larkin St, San Francisco, CA 94109"
       },
-      "locationImage": "images/mr-holmes-bakehouse.jpg",
-      "thumbnail": "images/mr-holmes-bakehouse.jpg",
+      "locationImage": "mr-holmes-bakehouse",
+      "thumbnail": "mr-holmes-bakehouse",
       "details": [
         {
           "title": "Overview",
@@ -116,8 +116,8 @@
         "name": "Trestle",
         "address": "531 Jackson St, San Francisco, CA 94111"
       },
-      "locationImage": "images/trestle.jpg",
-      "thumbnail": "images/trestle.jpg",
+      "locationImage": "trestle",
+      "thumbnail": "trestle",
       "details": [
         {
           "title": "Overview",
