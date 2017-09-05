@@ -6,6 +6,12 @@ class DetailScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
     title: navigation.state.params.place.detail,
   });
+<<<<<<< HEAD
+=======
+
+  static defaultProps = {
+  };
+>>>>>>> origin/locationimages
 
   render() {
     console.log(this.props);
