@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {
+  FlatList,
   Image,
   StyleSheet,
   Text,
@@ -7,6 +8,12 @@ import {
 } from 'react-native';
 import Card from '../components/Card';
 import { requireImage } from '../constants/Images';
+import {
+  BLACK_MESSAGE,
+  BLACK_TITLE,
+  CYAN_BORDER,
+  WHITE_BACKGROUND,
+} from '../constants/colorConstants';
 
 class DetailScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
@@ -14,25 +21,37 @@ class DetailScreen extends Component {
   });
 
   renderCarousel(carousel) {
-    // TODO: do it properly with a lightbox or something
     if (!carousel) {
       return;
     }
-    return carousel.map((image) => {
-        return (
-          <Image
-            source={requireImage(image)}
-          />
-        )
+    images = carousel.map((image) => {
+      return { key: image };
     });
+    return (
+      <FlatList
+        style={styles.carouselContainer}
+        data={images}
+        renderItem={({item}) =>
+          <Image style={styles.carouselImage}
+            source={requireImage(item.key)}
+          />
+        }
+        horizontal
+      />
+    );
   }
 
   renderDetails(details) {
     return details.map((detail) => {
       return (
-        <View>
-          <Text>{detail.title}</Text>
-          <Text>{detail.text}</Text>
+        <View style={styles.detailsContainer}>
+          <Text style={styles.title}>
+            {detail.title}
+          </Text>
+          <View style={styles.halfBorder} />
+          <Text style={styles.text}>
+            {detail.text}
+          </Text>
           {this.renderCarousel(detail.carousel)}
         </View>
       )
@@ -62,7 +81,41 @@ class DetailScreen extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    backgroundColor: WHITE_BACKGROUND,
+    flex: 1,
+  },
+  detailsContainer: {
+    marginTop: 20,
+  },
+  title: {
+    color: BLACK_TITLE,
+    fontSize: 24,
+    lineHeight: 40,
+    marginLeft: 20,
+    marginRight: 20,
+  },
+  halfBorder: {
+    backgroundColor: CYAN_BORDER,
+    width: 40,
+    height: 2,
+    marginLeft: 20,
+    marginTop: 4,
+  },
+  text: {
+    color: BLACK_MESSAGE,
+    fontSize: 16,
+    lineHeight: 20,
+    margin: 20,
+  },
+  carouselContainer: {
+    marginLeft: 20,
+  },
+  carouselImage: {
+    height: 80,
+    width: 120,
+    marginRight: 20,
+  },
 });
 
 export default DetailScreen;
