@@ -9,10 +9,10 @@ import {
 import Card from '../components/Card';
 import { requireImage } from '../constants/Images';
 import {
-  BACKGROUND,
   BLACK_MESSAGE,
   BLACK_TITLE,
-  CYAN,
+  CYAN_BORDER,
+  WHITE_BACKGROUND,
 } from '../constants/colorConstants';
 
 class DetailScreen extends Component {
@@ -51,7 +51,7 @@ class DetailScreen extends Component {
           <View style={styles.halfBorder} />
           <Text style={styles.text}>
             {detail.text}
-        </Text>
+          </Text>
           {this.renderCarousel(detail.carousel)}
         </View>
       )
@@ -82,7 +82,7 @@ class DetailScreen extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: BACKGROUND,
+    backgroundColor: WHITE_BACKGROUND,
     flex: 1,
   },
   detailsContainer: {
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     marginRight: 20,
   },
   halfBorder: {
-    backgroundColor: CYAN,
+    backgroundColor: CYAN_BORDER,
     width: 40,
     height: 2,
     marginLeft: 20,
