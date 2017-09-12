@@ -10,6 +10,7 @@ import {
 import PropTypes from 'prop-types';
 import Card from '../components/Card';
 import { requireImage } from '../constants/Images';
+import SupportedMapsContainer from './SupportedMapsContainer';
 import {
   BLACK_MESSAGE,
   BLACK_TITLE,
@@ -78,6 +79,7 @@ class DetailScreen extends PureComponent {
           imageName={locationImage}
           title={name}
         />
+        <SupportedMapsContainer open />
         {renderDetails(details)}
       </ScrollView>
     );
