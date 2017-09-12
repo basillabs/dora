@@ -39,7 +39,10 @@ function renderCarousel(carousel) {
 
 function renderDetails(details) {
   return details.map(detail => (
-    <View style={styles.detailsContainer}>
+    <View
+      key={detail.title}
+      style={styles.detailsContainer}
+    >
       <Text style={styles.title}>
         {detail.title}
       </Text>
