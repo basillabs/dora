@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import {
   FlatList,
   Image,
@@ -6,6 +6,7 @@ import {
   Text,
   View,
 } from 'react-native';
+import PropTypes from 'prop-types';
 import Card from '../components/Card';
 import { requireImage } from '../constants/Images';
 import {
@@ -15,57 +16,56 @@ import {
   WHITE_BACKGROUND,
 } from '../constants/colorConstants';
 
-class DetailScreen extends Component {
+function renderCarousel(carousel) {
+  if (!carousel) {
+    return null;
+  }
+  const images = carousel.map(image => ({ key: image }));
+
+  return (
+    <FlatList
+      style={styles.carouselContainer}
+      data={images}
+      renderItem={({ item }) =>
+        <Image
+          style={styles.carouselImage}
+          source={requireImage(item.key)}
+        />
+      }
+      horizontal
+    />
+  );
+}
+
+function renderDetails(details) {
+  return details.map(detail => (
+    <View style={styles.detailsContainer}>
+      <Text style={styles.title}>
+        {detail.title}
+      </Text>
+      <View style={styles.halfBorder} />
+      <Text style={styles.text}>
+        {detail.text}
+      </Text>
+      {renderCarousel(detail.carousel)}
+    </View>
+  ));
+}
+
+class DetailScreen extends PureComponent {
+  static propTypes = {
+    navigation: PropTypes.object.isRequired,
+  };
+
   static navigationOptions = ({ navigation }) => ({
     title: navigation.state.params.place.detail,
   });
 
-  renderCarousel(carousel) {
-    if (!carousel) {
-      return;
-    }
-    images = carousel.map((image) => {
-      return { key: image };
-    });
-    return (
-      <FlatList
-        style={styles.carouselContainer}
-        data={images}
-        renderItem={({item}) =>
-          <Image style={styles.carouselImage}
-            source={requireImage(item.key)}
-          />
-        }
-        horizontal
-      />
-    );
-  }
-
-  renderDetails(details) {
-    return details.map((detail) => {
-      return (
-        <View style={styles.detailsContainer}>
-          <Text style={styles.title}>
-            {detail.title}
-          </Text>
-          <View style={styles.halfBorder} />
-          <Text style={styles.text}>
-            {detail.text}
-          </Text>
-          {this.renderCarousel(detail.carousel)}
-        </View>
-      )
-    });
-  }
-
   render() {
     const {
-      name,
-      short_address,
-      googleMapsParameter,
-      locationImage,
-      thumbnail,
       details,
+      locationImage,
+      name,
     } = this.props.navigation.state.params.place;
 
     return (
@@ -74,7 +74,7 @@ class DetailScreen extends Component {
           imageName={locationImage}
           title={name}
         />
-        {this.renderDetails(details)}
+        {renderDetails(details)}
       </View>
     );
   }
