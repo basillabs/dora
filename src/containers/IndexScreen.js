@@ -13,7 +13,7 @@ const mapStateToProps = state => ({
 });
 
 
-class IndexScreen extends PureComponent {
+class IndexScreenContainer extends PureComponent {
   static navigationOptions = {
     title: 'Index',
   }
