@@ -1,10 +1,14 @@
 import React, { PureComponent } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import PropTypes from 'prop-types';
+import { StyleSheet } from 'react-native';
 import { Tile } from 'react-native-elements';
 import { requireImage } from '../constants/Images';
 
 export default class Card extends PureComponent {
-  static propTypes = {}
+  static propTypes = {
+    imageName: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+  }
   static defaultProps = {}
 
   render() {
@@ -14,8 +18,11 @@ export default class Card extends PureComponent {
     } = this.props;
     return (
       <Tile
+        containerStyle={styles.container}
+        imageContainerStyle={styles.image}
         imageSrc={requireImage(imageName)}
         title={title}
+        titleStyle={styles.title}
         featured
       />
     );
@@ -24,7 +31,17 @@ export default class Card extends PureComponent {
 
 const styles = StyleSheet.create({
   container: {
-    borderColor: 'gray',
-    borderWidth: 1,
+    height: 220,
+  },
+  image: {
+    height: 220,
+  },
+  title: {
+    bottom: 20,
+    fontSize: 30,
+    fontWeight: '500',
+    left: 20,
+    lineHeight: 40,
+    position: 'absolute',
   },
 });
