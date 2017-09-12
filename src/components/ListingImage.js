@@ -1,6 +1,5 @@
 import React, { PureComponent, PropTypes } from 'react';
 import { Tile } from 'react-native-elements';
-import { StyleSheet } from 'react-native';
 
 export default class ListingImage extends PureComponent {
   static propTypes = {

@@ -46,12 +46,12 @@ const styles = StyleSheet.create({
   },
 
   completed: {
-    backgroundColor: "gray",
+    backgroundColor: 'gray',
   },
 
   listItem: {
     borderBottomWidth: 1,
     borderBottomColor: '#cbd2d9',
-    backgroundColor: "white",
+    backgroundColor: 'white',
   },
 });

@@ -29,7 +29,7 @@ class IndexScreenContainer extends PureComponent {
     this.props.navigation.navigate('Detail', { place });
   }
 
-  tourRequireImage = (imageName) => requireImage(`tour_${this.props.tourId}/${imageName}`);
+  tourRequireImage = imageName => requireImage(`tour_${this.props.tourId}/${imageName}`);
 
   render() {
     return (
