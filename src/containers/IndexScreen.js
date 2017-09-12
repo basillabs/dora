@@ -26,10 +26,11 @@ class IndexScreenContainer extends PureComponent {
   }
 
   onPress = (place) => {
-    this.props.navigation.navigate('Detail', { place });
+    const tourId = this.props.tourId;
+    this.props.navigation.navigate('Detail', { place, tourId });
   }
 
-  tourRequireImage = imageName => requireImage(`tour_${this.props.tourId}/${imageName}`);
+  tourRequireImage = imageName => requireImage(this.props.tourId, imageName);
 
   render() {
     return (

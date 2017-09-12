@@ -20,8 +20,8 @@ class IndexScreen extends PureComponent {
   static propTypes = {
     navigation: PropTypes.object.isRequired,
     list: PropTypes.array.isRequired,
-    tourId: PropTypes.numeric.isRequired,
-    currentLocation: PropTypes.numeric.isRequired,
+    tourId: PropTypes.number.isRequired,
+    currentLocation: PropTypes.number.isRequired,
   }
 
   onPress = (place) => {
