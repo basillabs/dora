@@ -1,6 +1,6 @@
 import React, { PureComponent, PropTypes } from 'react';
 import { Tile } from 'react-native-elements';
-import { Image, View, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 export default class ListingImage extends PureComponent {
   static propTypes = {
@@ -21,11 +21,3 @@ export default class ListingImage extends PureComponent {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    borderStyle: "solid",
-    borderWidth: 2,
-    height: 200
-  },
-});

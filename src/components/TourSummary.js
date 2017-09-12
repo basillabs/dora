@@ -1,4 +1,4 @@
-import React, { PureComponent, PropTypes } from 'react';
+import React, { PureComponent } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
 export default class TourSummary extends PureComponent {
@@ -21,7 +21,7 @@ export default class TourSummary extends PureComponent {
 
 const styles = StyleSheet.create({
   container: {
-    borderStyle: "solid",
-    borderWidth: 2
+    borderStyle: 'solid',
+    borderWidth: 2,
   },
 });

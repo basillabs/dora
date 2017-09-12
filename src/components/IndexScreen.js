@@ -4,13 +4,13 @@ import { View, StyleSheet } from 'react-native';
 import Listing from '../components/Listing';
 import ListingImage from '../components/ListingImage';
 import TourSummary from '../components/TourSummary';
+import { requireImage } from '../constants/Images';
 
 const mapStateToProps = state => ({
   list: state.locationListReducer.locations,
   currentLocation: state.tourReducer.currentLocation,
   tourId: state.tourReducer.tourId,
 });
-
 
 class IndexScreen extends PureComponent {
   static navigationOptions = {
@@ -20,6 +20,8 @@ class IndexScreen extends PureComponent {
   static propTypes = {
     navigation: PropTypes.object.isRequired,
     list: PropTypes.array.isRequired,
+    tourId: PropTypes.numeric.isRequired,
+    currentLocation: PropTypes.numeric.isRequired,
   }
 
   onPress = (place) => {

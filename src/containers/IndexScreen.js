@@ -29,9 +29,7 @@ class IndexScreenContainer extends PureComponent {
     this.props.navigation.navigate('Detail', { place });
   }
 
-  tourRequireImage = (imageName) => {
-    return requireImage(`tour_${this.props.tourId}/${imageName}`);
-  }
+  tourRequireImage = (imageName) => requireImage(`tour_${this.props.tourId}/${imageName}`);
 
   render() {
     return (
@@ -54,8 +52,8 @@ class IndexScreenContainer extends PureComponent {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
   },
 });
 
-export default connect(mapStateToProps)(IndexScreen);
+export default connect(mapStateToProps)(IndexScreenContainer);

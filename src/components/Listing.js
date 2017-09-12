@@ -1,6 +1,6 @@
 import React, { PureComponent, PropTypes } from 'react';
 import { FlatList, StyleSheet } from 'react-native';
-import { List, ListItem } from 'react-native-elements';
+import { ListItem } from 'react-native-elements';
 
 export default class Listing extends PureComponent {
   static propTypes = {
@@ -31,7 +31,7 @@ export default class Listing extends PureComponent {
             onPress={() => onPress(item)}
             containerStyle={[
               styles.listItem,
-              this.props.currentLocation > index && styles.completed
+              this.props.currentLocation > index && styles.completed,
             ]}
           />
         )}
