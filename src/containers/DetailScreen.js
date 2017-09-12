@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import {
   FlatList,
   Image,
+  ScrollView,
   StyleSheet,
   Text,
   View,
@@ -72,13 +73,13 @@ class DetailScreen extends PureComponent {
     } = this.props.navigation.state.params.place;
 
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <Card
           imageName={locationImage}
           title={name}
         />
         {renderDetails(details)}
-      </View>
+      </ScrollView>
     );
   }
 }
