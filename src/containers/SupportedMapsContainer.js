@@ -1,8 +1,14 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import OpenInMapsActionSheet from '../components/OpenInMapsActionSheet';
 import AppInstalledChecker from '../utils/AppInstalledChecker';
 
 export default class SupportedMapsContainer extends PureComponent {
+  static propTypes = {
+    onClose: PropTypes.func.isRequired,
+    placeDetail: PropTypes.object.isRequired,
+  }
+
   constructor(props, context) {
     super(props, context);
 
@@ -13,14 +19,26 @@ export default class SupportedMapsContainer extends PureComponent {
 
   componentDidMount() {
     AppInstalledChecker.getSupportedMapApps().then((apps) => {
-      const mapAppTitles = apps.map(app => app.title);
-      this.setState({ apps: mapAppTitles });
+      this.setState({ apps });
     });
+  }
+
+  onPress = (index) => {
+    if (this.state.apps[index]) {
+      AppInstalledChecker.open(this.state.apps[index].url,
+        this.props.placeDetail.address);
+    } else {
+      this.props.onClose();
+    }
   }
 
   render() {
     return (
-      <OpenInMapsActionSheet apps={this.state.apps} {...this.props} />
+      <OpenInMapsActionSheet
+        apps={this.state.apps.map(app => app.title)}
+        onPress={this.onPress}
+        {...this.props}
+      />
     );
   }
 }

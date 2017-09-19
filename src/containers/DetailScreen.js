@@ -7,6 +7,7 @@ import {
   Text,
   View,
 } from 'react-native';
+import { Button } from 'react-native-elements';
 import PropTypes from 'prop-types';
 import Card from '../components/Card';
 import { requireImage } from '../constants/Images';
@@ -39,24 +40,6 @@ function renderCarousel(carousel) {
   );
 }
 
-function renderDetails(details) {
-  return details.map(detail => (
-    <View
-      key={detail.title}
-      style={styles.detailsContainer}
-    >
-      <Text style={styles.title}>
-        {detail.title}
-      </Text>
-      <View style={styles.halfBorder} />
-      <Text style={styles.text}>
-        {detail.text}
-      </Text>
-      {renderCarousel(detail.carousel)}
-    </View>
-  ));
-}
-
 class DetailScreen extends PureComponent {
   static propTypes = {
     navigation: PropTypes.object.isRequired,
@@ -66,10 +49,49 @@ class DetailScreen extends PureComponent {
     title: navigation.state.params.place.detail,
   });
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      displayingDirectionMenu: false,
+    };
+  }
+
+  onNavigationPress = () => {
+    this.setState({
+      displayingDirectionMenu: !this.state.displayingDirectionMenu,
+    });
+  }
+
+  onNavigationMenuClose = () => {
+    this.setState({
+      displayingDirectionMenu: false,
+    });
+  }
+
+  renderDetails(details) {
+    return details.map(detail => (
+      <View
+        key={detail.title}
+        style={styles.detailsContainer}
+      >
+        <Text style={styles.title}>
+          {detail.title}
+        </Text>
+        <View style={styles.halfBorder} />
+        <Text style={styles.text}>
+          {detail.text}
+        </Text>
+        {renderCarousel(detail.carousel)}
+      </View>
+    ));
+  }
+
   render() {
     const {
       details,
       locationImage,
+      googleMapsParameter,
       name,
     } = this.props.navigation.state.params.place;
 
@@ -79,8 +101,16 @@ class DetailScreen extends PureComponent {
           imageName={locationImage}
           title={name}
         />
-        <SupportedMapsContainer open />
-        {renderDetails(details)}
+        {this.renderDetails(details)}
+        <Button
+          title="Directions"
+          onPress={this.onNavigationPress}
+        />
+        <SupportedMapsContainer
+          placeDetail={googleMapsParameter}
+          open={this.state.displayingDirectionMenu}
+          onClose={this.onNavigationMenuClose}
+        />
       </ScrollView>
     );
   }

@@ -10,6 +10,7 @@ export default class OpenInMapsActionSheet extends Component {
     apps: PropTypes.array,
     open: PropTypes.bool,
     title: PropTypes.string,
+    onPress: PropTypes.func.isRequired,
   }
 
   static defaultProps = {
@@ -26,14 +27,18 @@ export default class OpenInMapsActionSheet extends Component {
     };
   }
 
-  handlePress = () => {
-
+  handlePress = (index) => {
+    this.props.onPress(index);
   }
 
   componentDidMount() {
     if (this.props.open && this.ActionSheet) {
       this.ActionSheet.show();
     }
+  }
+
+  componentWillUnmount() {
+    this.ActionSheet = null;
   }
 
   componentWillReceiveProps(nextProps) {
@@ -60,9 +65,6 @@ export default class OpenInMapsActionSheet extends Component {
         <ActionSheet
           ref={(o) => {
             this.ActionSheet = o;
-            if (this.props.open) {
-              o.show();
-            }
           }}
           cancelButtonIndex={this.state.cancelIndex}
           title={this.props.title}

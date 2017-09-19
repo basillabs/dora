@@ -3,8 +3,10 @@ import { Platform, Linking } from 'react-native';
 
 const Google = {
   title: 'Open in Google Maps',
-  url: 'comgooglemaps://',
+  url: 'https://www.google.com/maps/search/',
 };
+
+// https://developers.google.com/waze/api/
 const Waze = {
   title: 'Open in Waze Maps',
   url: 'waze://',
@@ -42,5 +44,9 @@ export default class AppInstalledChecker {
     return checkApps().then(values => {
       return values.filter(e => !!e);
     });
+  }
+
+  static open(url, address) {
+    Linking.openURL(`${url}?q=${address}`);
   }
 }
