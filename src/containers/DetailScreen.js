@@ -1,5 +1,12 @@
 import React, { PureComponent } from 'react';
-import { FlatList, Image, StyleSheet, Text, View, ScrollView } from 'react-native';
+import {
+  FlatList,
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 import PropTypes from 'prop-types';
 import Card from '../components/Card';
 import { requireImage } from '../constants/Images';
