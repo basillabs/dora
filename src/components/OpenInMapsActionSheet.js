@@ -63,9 +63,7 @@ export default class OpenInMapsActionSheet extends Component {
     return (
       <View>
         <ActionSheet
-          ref={(o) => {
-            this.ActionSheet = o;
-          }}
+          ref={(o) => {this.ActionSheet = o}}
           cancelButtonIndex={this.state.cancelIndex}
           title={this.props.title}
           options={this.getOptions()}

@@ -1,11 +1,9 @@
 import { Platform, Linking } from 'react-native';
 
-
 const Google = {
   title: 'Open in Google Maps',
   url: 'https://www.google.com/maps/search/',
 };
-
 // https://developers.google.com/waze/api/
 const Waze = {
   title: 'Open in Waze Maps',
@@ -19,8 +17,7 @@ const Apple = {
 
 const mapApps = [
   ...(Platform.OS === 'ios' ? [Apple] : []),
-  ...(Platform.OS === 'android' ? [Google] : []),
-  ...(Platform.OS === 'ios' ? [Google] : []),
+  Google,
   Waze,
 ];
 

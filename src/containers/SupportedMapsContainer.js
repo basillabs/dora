@@ -27,9 +27,8 @@ export default class SupportedMapsContainer extends PureComponent {
     if (this.state.apps[index]) {
       AppInstalledChecker.open(this.state.apps[index].url,
         this.props.placeDetail.address);
-    } else {
-      this.props.onClose();
     }
+    this.props.onClose();
   }
 
   render() {
