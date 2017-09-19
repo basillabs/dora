@@ -12,8 +12,7 @@ const mapStateToProps = state => ({
   tourId: state.tourReducer.tourId,
 });
 
-
-class IndexScreenContainer extends PureComponent {
+class IndexScreen extends PureComponent {
   static navigationOptions = {
     title: 'Index',
   }
@@ -21,16 +20,17 @@ class IndexScreenContainer extends PureComponent {
   static propTypes = {
     navigation: PropTypes.object.isRequired,
     list: PropTypes.array.isRequired,
-    currentLocation: PropTypes.number.isRequired,
     tourId: PropTypes.number.isRequired,
+    currentLocation: PropTypes.number.isRequired,
   }
 
   onPress = (place) => {
-    const tourId = this.props.tourId;
-    this.props.navigation.navigate('Detail', { place, tourId });
+    this.props.navigation.navigate('Detail', { place });
   }
 
-  tourRequireImage = imageName => requireImage(this.props.tourId, imageName);
+  tourRequireImage = (imageName) => {
+    requireImage(`tour_${this.props.tourId}/${imageName}`);
+  }
 
   render() {
     return (
@@ -41,7 +41,6 @@ class IndexScreenContainer extends PureComponent {
         />
         <TourSummary />
         <Listing
-          currentLocation={this.props.currentLocation}
           list={this.props.list}
           tourRequireImage={this.tourRequireImage}
           onPress={this.onPress}
@@ -57,4 +56,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default connect(mapStateToProps)(IndexScreenContainer);
+export default connect(mapStateToProps)(IndexScreen);
