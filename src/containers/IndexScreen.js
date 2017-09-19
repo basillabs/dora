@@ -1,6 +1,6 @@
 import React, { PureComponent, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { View, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 import Listing from '../components/Listing';
 import ListingImage from '../components/ListingImage';
 import TourSummary from '../components/TourSummary';
@@ -34,7 +34,7 @@ class IndexScreenContainer extends PureComponent {
 
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <ListingImage
           currentLocation={this.props.currentLocation}
           tourRequireImage={this.tourRequireImage}
@@ -45,8 +45,9 @@ class IndexScreenContainer extends PureComponent {
           list={this.props.list}
           tourRequireImage={this.tourRequireImage}
           onPress={this.onPress}
+          tourId={this.props.tourId}
         />
-      </View>
+      </ScrollView>
     );
   }
 }

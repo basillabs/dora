@@ -11,6 +11,7 @@
       },
       "locationImage": "vive-la-tarte",
       "thumbnail": "vive-la-tarte",
+      "image": "../data/tours/tour_0/images/vive-la-tarte.jpg",
       "details": [
         {
           "title": "Overview",
@@ -36,6 +37,7 @@
       },
       "locationImage": "chez-maman",
       "thumbnail": "chez-maman",
+      "image": "../data/tours/tour_0/images/chez-maman.jpg",
       "details": [
         {
           "title": "Overview",
@@ -56,6 +58,7 @@
       },
       "locationImage": "sweet-maple",
       "thumbnail": "sweet-maple",
+      "image": "../data/tours/tour_0/images/sweet-maple.jpg",
       "details": [
         {
           "title": "Overview",
@@ -76,6 +79,7 @@
       },
       "locationImage": "salt-and-straw",
       "thumbnail": "salt-and-straw",
+      "image": "../data/tours/tour_0/images/salt-and-straw.jpg",
       "details": [
         {
           "title": "Overview",
@@ -96,6 +100,7 @@
       },
       "locationImage": "mr-holmes-bakehouse",
       "thumbnail": "mr-holmes-bakehouse",
+      "image": "../data/tours/tour_0/images/mr-holmes-bakehouse.jpg",
       "details": [
         {
           "title": "Overview",
@@ -104,28 +109,6 @@
         {
           "title": "Spiritual Needs",
           "text": "Pray the cruffins haven't run out. Get there early. Order your cruffin and take a picture of it with the sign, then post on social media."
-        }
-      ]
-    },
-    {
-      "name": "Trestles",
-      "summary": "New American restaurant offering 3-course fixed-price meals in a quaint space with modern flair.",
-      "spiritualSignificance": "Pray people have enough money to give to the kingdom after eating here.",
-      "short_address": "531 Jackson St",
-      "googleMapsParameter": {
-        "name": "Trestle",
-        "address": "531 Jackson St, San Francisco, CA 94111"
-      },
-      "locationImage": "images/trestle.jpg",
-      "thumbnail": "images/trestle.jpg",
-      "details": [
-        {
-          "title": "Overview",
-          "text": "New American restaurant offering 3-course fixed-price meals in a quaint space with modern flair."
-        },
-        {
-          "title": "Spiritual Needs",
-          "text": "Pray people have enough money to give to the kingdom after eating here. Make a reservation. Sit down and eat."
         }
       ]
     },
@@ -140,6 +123,7 @@
       },
       "locationImage": "trestle",
       "thumbnail": "trestle",
+      "image": "../data/tours/tour_0/images/trestle.jpg",
       "details": [
         {
           "title": "Overview",
