@@ -44,7 +44,6 @@ class IndexScreen extends PureComponent {
           list={this.props.list}
           tourRequireImage={this.tourRequireImage}
           onPress={this.onPress}
-          navigation={this.props.navigation}
         />
       </View>
     );

@@ -65,7 +65,6 @@ class DetailScreen extends PureComponent {
       name,
     } = this.props.navigation.state.params.place;
 
-    console.log("tour: ", this.props.navigation);
     const tourId = this.props.navigation.state.params.tourId;
 
     return (

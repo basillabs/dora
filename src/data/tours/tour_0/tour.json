@@ -11,7 +11,6 @@
       },
       "locationImage": "vive-la-tarte",
       "thumbnail": "vive-la-tarte",
-      "image": "../data/tours/tour_0/images/vive-la-tarte.jpg",
       "details": [
         {
           "title": "Overview",
@@ -37,7 +36,6 @@
       },
       "locationImage": "chez-maman",
       "thumbnail": "chez-maman",
-      "image": "../data/tours/tour_0/images/chez-maman.jpg",
       "details": [
         {
           "title": "Overview",
@@ -58,7 +56,6 @@
       },
       "locationImage": "sweet-maple",
       "thumbnail": "sweet-maple",
-      "image": "../data/tours/tour_0/images/sweet-maple.jpg",
       "details": [
         {
           "title": "Overview",
@@ -79,7 +76,6 @@
       },
       "locationImage": "salt-and-straw",
       "thumbnail": "salt-and-straw",
-      "image": "../data/tours/tour_0/images/salt-and-straw.jpg",
       "details": [
         {
           "title": "Overview",
@@ -100,7 +96,6 @@
       },
       "locationImage": "mr-holmes-bakehouse",
       "thumbnail": "mr-holmes-bakehouse",
-      "image": "../data/tours/tour_0/images/mr-holmes-bakehouse.jpg",
       "details": [
         {
           "title": "Overview",
@@ -123,7 +118,6 @@
       },
       "locationImage": "trestle",
       "thumbnail": "trestle",
-      "image": "../data/tours/tour_0/images/trestle.jpg",
       "details": [
         {
           "title": "Overview",
