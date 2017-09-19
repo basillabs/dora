@@ -108,28 +108,6 @@
       ]
     },
     {
-      "name": "Trestles",
-      "summary": "New American restaurant offering 3-course fixed-price meals in a quaint space with modern flair.",
-      "spiritualSignificance": "Pray people have enough money to give to the kingdom after eating here.",
-      "short_address": "531 Jackson St",
-      "googleMapsParameter": {
-        "name": "Trestle",
-        "address": "531 Jackson St, San Francisco, CA 94111"
-      },
-      "locationImage": "images/trestle.jpg",
-      "thumbnail": "images/trestle.jpg",
-      "details": [
-        {
-          "title": "Overview",
-          "text": "New American restaurant offering 3-course fixed-price meals in a quaint space with modern flair."
-        },
-        {
-          "title": "Spiritual Needs",
-          "text": "Pray people have enough money to give to the kingdom after eating here. Make a reservation. Sit down and eat."
-        }
-      ]
-    },
-    {
       "name": "Trestle",
       "summary": "New American restaurant offering 3-course fixed-price meals in a quaint space with modern flair.",
       "spiritualSignificance": "Pray people have enough money to give to the kingdom after eating here.",
