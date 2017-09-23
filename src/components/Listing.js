@@ -1,6 +1,9 @@
 import React, { PureComponent, PropTypes } from 'react';
 import { FlatList, StyleSheet } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
+import {
+  CYAN_BORDER,
+} from '../constants/colorConstants';
 
 export default class Listing extends PureComponent {
   static propTypes = {
@@ -27,6 +30,8 @@ export default class Listing extends PureComponent {
             <ListItem
               roundAvatar
               title={item.name}
+              rightTitle={item.completed ? "Complete" : null}
+              rightTitleStyle={styles.complete}
               onPress={() => onPress(item)}
               containerStyle={styles.listItem}
             />
@@ -45,4 +50,8 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#cbd2d9',
   },
+  complete: {
+    color: CYAN_BORDER,
+    fontWeight: 'bold',
+  }
 });

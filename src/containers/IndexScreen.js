@@ -3,11 +3,19 @@ import { connect } from 'react-redux';
 import { View, StyleSheet } from 'react-native';
 import Listing from '../components/Listing';
 import ListingImage from '../components/ListingImage';
+import { setLocation } from '../actions/locationActions';
 
-const mapStateToProps = state => ({
-  list: state.locationListReducer.locations,
-});
+function mapStateToProps(state) {
+  return {
+    list: state.locationListReducer.locations,
+  };
+}
 
+function mapDispatchToProps(dispatch) {
+  return {
+    setLocation: (locationId) => dispatch(setLocation(locationId)),
+  };
+}
 
 class IndexScreen extends PureComponent {
   static navigationOptions = {
@@ -21,6 +29,7 @@ class IndexScreen extends PureComponent {
 
   onPress = (place) => {
     this.props.navigation.navigate('Detail', { place });
+    this.props.setLocation(place.id);
   }
 
   render() {
@@ -30,6 +39,7 @@ class IndexScreen extends PureComponent {
         <Listing
           list={this.props.list}
           onPress={this.onPress}
+          {...this.props}
         />
       </View>
     );
@@ -42,4 +52,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default connect(mapStateToProps)(IndexScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(IndexScreen);
