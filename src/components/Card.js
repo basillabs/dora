@@ -8,6 +8,7 @@ export default class Card extends PureComponent {
   static propTypes = {
     imageName: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    tourId: PropTypes.number.isRequired,
   }
   static defaultProps = {}
 
@@ -15,12 +16,14 @@ export default class Card extends PureComponent {
     const {
       imageName,
       title,
+      tourId,
     } = this.props;
+
     return (
       <Tile
         containerStyle={styles.container}
         imageContainerStyle={styles.image}
-        imageSrc={requireImage(imageName)}
+        imageSrc={requireImage(tourId, imageName)}
         title={title}
         titleStyle={styles.title}
         featured

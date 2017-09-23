@@ -33,7 +33,7 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-function renderCarousel(carousel) {
+function renderCarousel(carousel, tourId) {
   if (!carousel) {
     return null;
   }
@@ -46,7 +46,7 @@ function renderCarousel(carousel) {
       renderItem={({ item }) =>
         <Image
           style={styles.carouselImage}
-          source={requireImage(item.key)}
+          source={requireImage(tourId, item.key)}
         />
       }
       horizontal
@@ -54,7 +54,7 @@ function renderCarousel(carousel) {
   );
 }
 
-function renderDetails(details) {
+function renderDetails(details, tourId) {
   return details.map(detail => (
     <View
       key={detail.title}
@@ -67,7 +67,7 @@ function renderDetails(details) {
       <Text style={styles.text}>
         {detail.text}
       </Text>
-      {renderCarousel(detail.carousel)}
+      {renderCarousel(detail.carousel, tourId)}
     </View>
   ));
 }
@@ -88,13 +88,16 @@ class DetailScreen extends PureComponent {
       name,
     } = this.props.navigation.state.params.place;
 
+    const tourId = this.props.navigation.state.params.tourId;
+
     return (
       <ScrollView contentContainerStyle={styles.container}>
         <Card
           imageName={locationImage}
+          tourId={tourId}
           title={name}
         />
-        {renderDetails(details)}
+        {renderDetails(details, tourId)}
         <ToggleLocationButton {...this.props} />
       </ScrollView>
     );

@@ -1,9 +1,8 @@
 import React, { PureComponent, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { ScrollView, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import Listing from '../components/Listing';
 import ListingImage from '../components/ListingImage';
-import { setLocation } from '../actions/locationActions';
 import TourSummary from '../components/TourSummary';
 import { requireImage } from '../constants/Images';
 
@@ -13,13 +12,7 @@ const mapStateToProps = state => ({
   tourId: state.tourReducer.tourId,
 });
 
-function mapDispatchToProps(dispatch) {
-  return {
-    setLocation: (locationId) => dispatch(setLocation(locationId)),
-  };
-}
-
-class IndexScreenContainer extends PureComponent {
+class IndexScreen extends PureComponent {
   static navigationOptions = {
     title: 'Index',
   }
@@ -27,35 +20,32 @@ class IndexScreenContainer extends PureComponent {
   static propTypes = {
     navigation: PropTypes.object.isRequired,
     list: PropTypes.array.isRequired,
-    currentLocation: PropTypes.number.isRequired,
     tourId: PropTypes.number.isRequired,
+    currentLocation: PropTypes.number.isRequired,
   }
 
   onPress = (place) => {
-    const tourId = this.props.tourId;
-    this.props.navigation.navigate('Detail', { place, tourId });
-    this.props.setLocation(place.id);
+    this.props.navigation.navigate('Detail', { place });
   }
 
-  tourRequireImage = imageName => requireImage(this.props.tourId, imageName);
+  tourRequireImage = (imageName) => {
+    requireImage(`tour_${this.props.tourId}/${imageName}`);
+  }
 
   render() {
     return (
-      <ScrollView style={styles.container}>
+      <View style={styles.container}>
         <ListingImage
           currentLocation={this.props.currentLocation}
           tourRequireImage={this.tourRequireImage}
         />
         <TourSummary />
         <Listing
-          currentLocation={this.props.currentLocation}
           list={this.props.list}
           tourRequireImage={this.tourRequireImage}
           onPress={this.onPress}
-          tourId={this.props.tourId}
-          {...this.props}
         />
-      </ScrollView>
+      </View>
     );
   }
 }
@@ -66,4 +56,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(IndexScreenContainer);
+export default connect(mapStateToProps)(IndexScreen);
