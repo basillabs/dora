@@ -53,13 +53,13 @@ class DetailScreen extends PureComponent {
     };
   }
 
-  onNavigationPress = () => {
+  onDirectionsPress = () => {
     this.setState({
       displayingDirectionMenu: !this.state.displayingDirectionMenu,
     });
   }
 
-  onNavigationMenuClose = () => {
+  onDirectionsMenuClose = () => {
     this.setState({
       displayingDirectionMenu: false,
     });
@@ -123,7 +123,7 @@ class DetailScreen extends PureComponent {
         <SupportedMapsContainer
           placeDetail={googleMapsParameter}
           open={this.state.displayingDirectionMenu}
-          onClose={this.onNavigationMenuClose}
+          onClose={this.onDirectionsMenuClose}
         />
         <ToggleLocationButton {...this.props} />
       </ScrollView>
@@ -159,14 +159,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 20,
     margin: 20,
-  },
-  carouselContainer: {
-    marginLeft: 20,
-  },
-  carouselImage: {
-    height: 80,
-    width: 120,
-    marginRight: 20,
   },
   directionsButton: {
     marginBottom: 20,
