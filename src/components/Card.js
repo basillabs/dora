@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   title: {
     bottom: 20,
     fontSize: 30,
-    fontWeight: '500',
+    fontWeight: '700',
     left: 20,
     lineHeight: 40,
     position: 'absolute',
