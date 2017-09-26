@@ -1,9 +1,9 @@
 import React, { PureComponent, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { View, StyleSheet } from 'react-native';
+import IndexHeader from '../components/IndexHeader';
 import Listing from '../components/Listing';
 import ListingImage from '../components/ListingImage';
-import TourSummary from '../components/TourSummary';
 import { requireImage } from '../constants/Images';
 
 const mapStateToProps = state => ({
@@ -14,7 +14,7 @@ const mapStateToProps = state => ({
 
 class IndexScreen extends PureComponent {
   static navigationOptions = {
-    title: 'Dara',
+    header: null
   }
 
   static propTypes = {
@@ -35,11 +35,11 @@ class IndexScreen extends PureComponent {
   render() {
     return (
       <View style={styles.container}>
+        <IndexHeader />
         <ListingImage
           currentLocation={this.props.currentLocation}
           tourRequireImage={this.tourRequireImage}
         />
-        <TourSummary />
         <Listing
           list={this.props.list}
           tourRequireImage={this.tourRequireImage}
