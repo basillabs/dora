@@ -114,7 +114,7 @@ class DetailScreen extends PureComponent {
           title={name}
         />
         {this.renderDetails(details, tourId, this.props.navigation)}
-        <TouchableHighlight onPress={this.onNavigationPress}>
+        <TouchableHighlight onPress={this.onDirectionsPress}>
           <Image
             style={styles.directionsButton}
             source={require('../data/tours/tour_0/images/location_0.png')}
