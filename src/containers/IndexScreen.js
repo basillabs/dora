@@ -11,6 +11,7 @@ const mapStateToProps = state => ({
   list: state.locationListReducer.locations,
   currentLocation: state.tourReducer.currentLocation,
   tourId: state.tourReducer.tourId,
+  tourName: state.tourReducer.tourName,
 });
 
 function mapDispatchToProps(dispatch) {
@@ -42,7 +43,7 @@ class IndexScreenContainer extends PureComponent {
   render() {
     return (
       <ScrollView style={styles.container}>
-        <IndexHeader />
+        <IndexHeader tourName={this.props.tourName} />
         <ListingImage
           currentLocation={this.props.currentLocation}
           tourRequireImage={this.tourRequireImage}
