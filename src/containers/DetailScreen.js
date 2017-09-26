@@ -80,7 +80,7 @@ class DetailScreen extends PureComponent {
   static navigationOptions = ({ navigation }) => ({
     title: navigation.state.params.place.detail,
   });
-  
+
   render() {
     const {
       details,
@@ -108,7 +108,6 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: WHITE_BACKGROUND,
     flexDirection: 'column',
-    alignItems: 'center',
     paddingBottom: 20,
   },
   detailsContainer: {
