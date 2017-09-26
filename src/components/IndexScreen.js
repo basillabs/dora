@@ -13,10 +13,6 @@ const mapStateToProps = state => ({
 });
 
 class IndexScreen extends PureComponent {
-  static navigationOptions = {
-    header: null
-  }
-
   static propTypes = {
     navigation: PropTypes.object.isRequired,
     list: PropTypes.array.isRequired,

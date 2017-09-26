@@ -17,13 +17,15 @@ export default class ToggleLocationButton extends PureComponent {
 
   render() {
     return (
-      <TouchableWithoutFeedback onPress={this.toggleLocation}>
-        <View style={[styles.button, this.getButtonColor()]}>
-          <Text style={styles.text}>
-            Complete
-          </Text>
-        </View>
-      </TouchableWithoutFeedback>
+      <View style={styles.container}>
+        <TouchableWithoutFeedback onPress={this.toggleLocation}>
+          <View style={[styles.button, this.getButtonColor()]}>
+            <Text style={styles.text}>
+              Complete
+            </Text>
+          </View>
+        </TouchableWithoutFeedback>
+      </View>
     );
   }
 
@@ -34,7 +36,7 @@ export default class ToggleLocationButton extends PureComponent {
 
   toggleLocation() {
     this.props.toggleLocation(this.props.locationId);
-    this.props.navigation.navigate('Index');
+    this.props.navigation.goBack();
   }
 }
 
@@ -44,6 +46,10 @@ ToggleLocationButton.propTypes = {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+  },
   button: {
     paddingVertical: 10,
     paddingHorizontal: '20%',
@@ -60,5 +66,6 @@ const styles = StyleSheet.create({
   },
   text: {
     color: '#FFFFFF',
+    textAlign: 'center',
   }
 });
