@@ -36,7 +36,7 @@ export default class ToggleLocationButton extends PureComponent {
 
   toggleLocation() {
     this.props.toggleLocation(this.props.locationId);
-    this.props.navigation.navigate('Index');
+    this.props.navigation.goBack();
   }
 }
 
