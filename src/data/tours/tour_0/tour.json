@@ -3,6 +3,7 @@
   "tourName": "San Francisco",
   "tourDuration": "102",
   "locations": [{
+      "id": 0,
       "name": "vive la tarte",
       "short_address": "1160 Howard St",
       "googleMapsParameter": {
@@ -11,6 +12,7 @@
       },
       "locationImage": "vive-la-tarte",
       "thumbnail": "vive-la-tarte",
+      "completed": false,
       "details": [
         {
           "title": "Overview",
@@ -28,6 +30,7 @@
       ]
     },
     {
+      "id": 1,
       "name": "Chez Maman",
       "short_address": "401 Gough St",
       "googleMapsParameter": {
@@ -36,6 +39,7 @@
       },
       "locationImage": "chez-maman",
       "thumbnail": "chez-maman",
+      "completed": false,
       "details": [
         {
           "title": "Overview",
@@ -48,6 +52,7 @@
       ]
     },
     {
+      "id": 2,
       "name": "Sweet Maple",
       "short_address": "2101 Sutter St",
       "googleMapsParameter": {
@@ -56,6 +61,7 @@
       },
       "locationImage": "sweet-maple",
       "thumbnail": "sweet-maple",
+      "completed": false,
       "details": [
         {
           "title": "Overview",
@@ -68,6 +74,7 @@
       ]
     },
     {
+      "id": 3,
       "name": "Salt&Straw",
       "short_address": "2201 Fillmore St",
       "googleMapsParameter": {
@@ -76,6 +83,7 @@
       },
       "locationImage": "salt-and-straw",
       "thumbnail": "salt-and-straw",
+      "completed": false,
       "details": [
         {
           "title": "Overview",
@@ -88,6 +96,7 @@
       ]
     },
     {
+      "id": 4,
       "name": "Mr. Holmes Bakehouse",
       "short_address": "1042 Larkin St",
       "googleMapsParameter": {
@@ -96,6 +105,7 @@
       },
       "locationImage": "mr-holmes-bakehouse",
       "thumbnail": "mr-holmes-bakehouse",
+      "completed": false,
       "details": [
         {
           "title": "Overview",
@@ -108,6 +118,7 @@
       ]
     },
     {
+      "id": 5,
       "name": "Trestle",
       "summary": "New American restaurant offering 3-course fixed-price meals in a quaint space with modern flair.",
       "spiritualSignificance": "Pray people have enough money to give to the kingdom after eating here.",
@@ -118,6 +129,7 @@
       },
       "locationImage": "trestle",
       "thumbnail": "trestle",
+      "completed": false,
       "details": [
         {
           "title": "Overview",

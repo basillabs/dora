@@ -1,7 +1,16 @@
 import React, { PureComponent } from 'react';
-import { FlatList, Image, StyleSheet, Text, View, ScrollView } from 'react-native';
+import {
+  FlatList,
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Card from '../components/Card';
+import ToggleLocationButton from '../components/ToggleLocationButton';
 import { requireImage } from '../constants/Images';
 import {
   BLACK_MESSAGE,
@@ -9,6 +18,20 @@ import {
   CYAN_BORDER,
   WHITE_BACKGROUND,
 } from '../constants/colorConstants';
+import { toggleLocation } from '../actions/locationListActions';
+
+function mapStateToProps(state) {
+  return {
+    locationId: state.locationReducer.locationId,
+    list: state.locationListReducer.locations,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    toggleLocation: (locationId) => dispatch(toggleLocation(locationId)),
+  };
+}
 
 function renderCarousel(carousel, tourId) {
   if (!carousel) {
@@ -57,7 +80,7 @@ class DetailScreen extends PureComponent {
   static navigationOptions = ({ navigation }) => ({
     title: navigation.state.params.place.detail,
   });
-
+  
   render() {
     const {
       details,
@@ -68,13 +91,14 @@ class DetailScreen extends PureComponent {
     const tourId = this.props.navigation.state.params.tourId;
 
     return (
-      <ScrollView style={styles.container}>
+      <ScrollView contentContainerStyle={styles.container}>
         <Card
           imageName={locationImage}
           tourId={tourId}
           title={name}
         />
         {renderDetails(details, tourId)}
+        <ToggleLocationButton {...this.props} />
       </ScrollView>
     );
   }
@@ -83,7 +107,9 @@ class DetailScreen extends PureComponent {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: WHITE_BACKGROUND,
-    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'center',
+    paddingBottom: 20,
   },
   detailsContainer: {
     marginTop: 20,
@@ -118,4 +144,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default DetailScreen;
+export default connect(mapStateToProps, mapDispatchToProps)(DetailScreen);

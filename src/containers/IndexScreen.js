@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { ScrollView, StyleSheet } from 'react-native';
 import Listing from '../components/Listing';
 import ListingImage from '../components/ListingImage';
+import { setLocation } from '../actions/locationActions';
 import TourSummary from '../components/TourSummary';
 import { requireImage } from '../constants/Images';
 
@@ -12,6 +13,11 @@ const mapStateToProps = state => ({
   tourId: state.tourReducer.tourId,
 });
 
+function mapDispatchToProps(dispatch) {
+  return {
+    setLocation: (locationId) => dispatch(setLocation(locationId)),
+  };
+}
 
 class IndexScreenContainer extends PureComponent {
   static navigationOptions = {
@@ -28,6 +34,7 @@ class IndexScreenContainer extends PureComponent {
   onPress = (place) => {
     const tourId = this.props.tourId;
     this.props.navigation.navigate('Detail', { place, tourId });
+    this.props.setLocation(place.id);
   }
 
   tourRequireImage = imageName => requireImage(this.props.tourId, imageName);
@@ -46,6 +53,7 @@ class IndexScreenContainer extends PureComponent {
           tourRequireImage={this.tourRequireImage}
           onPress={this.onPress}
           tourId={this.props.tourId}
+          {...this.props}
         />
       </ScrollView>
     );
@@ -58,4 +66,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default connect(mapStateToProps)(IndexScreenContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(IndexScreenContainer);
