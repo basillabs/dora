@@ -1,7 +1,5 @@
 import React, { PureComponent } from 'react';
 import {
-  FlatList,
-  Image,
   ScrollView,
   StyleSheet,
   Text,
@@ -10,8 +8,8 @@ import {
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Card from '../components/Card';
+import CarouselList from '../components/Carousel';
 import ToggleLocationButton from '../components/ToggleLocationButton';
-import { requireImage } from '../constants/Images';
 import {
   BLACK_MESSAGE,
   BLACK_TITLE,
@@ -33,28 +31,20 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-function renderCarousel(carousel, tourId) {
+function renderCarousel(carousel, tourId, navigation) {
   if (!carousel) {
     return null;
   }
-  const images = carousel.map(image => ({ key: image }));
-
   return (
-    <FlatList
-      style={styles.carouselContainer}
-      data={images}
-      renderItem={({ item }) =>
-        <Image
-          style={styles.carouselImage}
-          source={requireImage(tourId, item.key)}
-        />
-      }
-      horizontal
+    <CarouselList
+      tourId={tourId}
+      imageList={carousel}
+      navigation={navigation}
     />
   );
 }
 
-function renderDetails(details, tourId) {
+function renderDetails(details, tourId, navigation) {
   return details.map(detail => (
     <View
       key={detail.title}
@@ -67,7 +57,7 @@ function renderDetails(details, tourId) {
       <Text style={styles.text}>
         {detail.text}
       </Text>
-      {renderCarousel(detail.carousel, tourId)}
+      {renderCarousel(detail.carousel, tourId, navigation)}
     </View>
   ));
 }
@@ -97,7 +87,7 @@ class DetailScreen extends PureComponent {
           tourId={tourId}
           title={name}
         />
-        {renderDetails(details, tourId)}
+        {renderDetails(details, tourId, this.props.navigation)}
         <ToggleLocationButton {...this.props} />
       </ScrollView>
     );
@@ -133,14 +123,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 20,
     margin: 20,
-  },
-  carouselContainer: {
-    marginLeft: 20,
-  },
-  carouselImage: {
-    height: 80,
-    width: 120,
-    marginRight: 20,
   },
 });
 
