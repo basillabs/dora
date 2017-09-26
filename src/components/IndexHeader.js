@@ -24,7 +24,7 @@ export default class IndexHeader extends PureComponent {
 const styles = StyleSheet.create({
   container: {
     paddingLeft: 20,
-    paddingTop: 30,
+    paddingTop: 20,
     paddingBottom: 20,
     backgroundColor: CYAN_BORDER,
   },
