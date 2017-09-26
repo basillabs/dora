@@ -39,6 +39,7 @@ export default class Listing extends PureComponent {
             subtitleStyle={styles.subtitleStyle}
             onPress={() => onPress(item)}
             containerStyle={styles.listItem}
+            hideChevron
           />
         )}
       />
@@ -57,7 +58,7 @@ const styles = StyleSheet.create({
 
   listItem: {
     borderBottomWidth: 1,
-    borderBottomColor: '#cbd2d9',
+    borderBottomColor: '#eee',
     backgroundColor: 'white',
   },
   avatarStyle: {

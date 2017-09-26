@@ -14,7 +14,7 @@ const mapStateToProps = state => ({
 
 class IndexScreen extends PureComponent {
   static navigationOptions = {
-    title: 'Index',
+    title: 'Dara',
   }
 
   static propTypes = {
