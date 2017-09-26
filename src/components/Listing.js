@@ -1,5 +1,6 @@
 import React, { PureComponent, PropTypes } from 'react';
 import { FlatList, StyleSheet } from 'react-native';
+import { CYAN_BORDER } from '../constants/colorConstants';
 import { List, ListItem, Avatar } from 'react-native-elements';
 import { requireImage } from '../constants/Images';
 
@@ -32,10 +33,13 @@ export default class Listing extends PureComponent {
             avatarStyle={styles.avatarStyle}
             title={item.name}
             titleStyle={styles.titleStyle}
+            rightTitle={item.completed ? "Complete" : null}
+            rightTitleStyle={styles.complete}
             subtitle={item.short_address}
             subtitleStyle={styles.subtitleStyle}
             onPress={() => onPress(item)}
             containerStyle={styles.listItem}
+            hideChevron
           />
         )}
       />
@@ -54,7 +58,7 @@ const styles = StyleSheet.create({
 
   listItem: {
     borderBottomWidth: 1,
-    borderBottomColor: '#cbd2d9',
+    borderBottomColor: '#eee',
     backgroundColor: 'white',
   },
   avatarStyle: {
@@ -72,4 +76,8 @@ const styles = StyleSheet.create({
     fontWeight: '100',
     fontSize: 14,
   },
+  complete: {
+    color: CYAN_BORDER,
+    fontWeight: 'bold',
+  }
 });

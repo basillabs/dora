@@ -1,15 +1,16 @@
 import React, { PureComponent } from 'react';
 import {
-  FlatList,
-  Image,
   ScrollView,
   StyleSheet,
   Text,
   View,
 } from 'react-native';
 import { Button } from 'react-native-elements';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Card from '../components/Card';
+import CarouselList from '../components/Carousel';
+import ToggleLocationButton from '../components/ToggleLocationButton';
 import { requireImage } from '../constants/Images';
 import SupportedMapsContainer from './SupportedMapsContainer';
 import {
@@ -18,6 +19,20 @@ import {
   CYAN_BORDER,
   WHITE_BACKGROUND,
 } from '../constants/colorConstants';
+import { toggleLocation } from '../actions/locationListActions';
+
+function mapStateToProps(state) {
+  return {
+    locationId: state.locationReducer.locationId,
+    list: state.locationListReducer.locations,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    toggleLocation: (locationId) => dispatch(toggleLocation(locationId)),
+  };
+}
 
 class DetailScreen extends PureComponent {
   static propTypes = {
@@ -48,28 +63,20 @@ class DetailScreen extends PureComponent {
     });
   }
 
-  renderCarousel(carousel, tourId) {
+  renderCarousel(carousel, tourId, navigation) {
     if (!carousel) {
       return null;
     }
-    const images = carousel.map(image => ({ key: image }));
-
     return (
-      <FlatList
-        style={styles.carouselContainer}
-        data={images}
-        renderItem={({ item }) =>
-          <Image
-            style={styles.carouselImage}
-            source={requireImage(tourId, item.key)}
-          />
-        }
-        horizontal
+      <CarouselList
+        tourId={tourId}
+        imageList={carousel}
+        navigation={navigation}
       />
     );
   }
 
-  renderDetails(details, tourId) {
+  renderDetails(details, tourId, navigation) {
     return details.map(detail => (
       <View
         key={detail.title}
@@ -82,7 +89,7 @@ class DetailScreen extends PureComponent {
         <Text style={styles.text}>
           {detail.text}
         </Text>
-        {this.renderCarousel(detail.carousel, tourId)}
+        {this.renderCarousel(detail.carousel, tourId, navigation)}
       </View>
     ));
   }
@@ -98,13 +105,13 @@ class DetailScreen extends PureComponent {
     const tourId = this.props.navigation.state.params.tourId;
 
     return (
-      <ScrollView style={styles.container}>
+      <ScrollView contentContainerStyle={styles.container}>
         <Card
           imageName={locationImage}
           tourId={tourId}
           title={name}
         />
-        {this.renderDetails(details, tourId)}
+        {this.renderDetails(details, tourId, this.props.navigation)}
         <Button
           title="Directions"
           onPress={this.onNavigationPress}
@@ -115,6 +122,7 @@ class DetailScreen extends PureComponent {
           open={this.state.displayingDirectionMenu}
           onClose={this.onNavigationMenuClose}
         />
+        <ToggleLocationButton {...this.props} />
       </ScrollView>
     );
   }
@@ -123,7 +131,8 @@ class DetailScreen extends PureComponent {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: WHITE_BACKGROUND,
-    flex: 1,
+    flexDirection: 'column',
+    paddingBottom: 20,
   },
   detailsContainer: {
     marginTop: 20,
@@ -161,4 +170,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default DetailScreen;
+export default connect(mapStateToProps, mapDispatchToProps)(DetailScreen);
