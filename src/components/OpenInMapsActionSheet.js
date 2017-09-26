@@ -19,10 +19,7 @@ export default class OpenInMapsActionSheet extends Component {
 
   constructor(props, context) {
     super(props, context);
-
-    this.state = {
-      cancelIndex: props.apps.length,
-    };
+    this.cancelIndex = props.apps.length;
   }
 
   handlePress = (index) => {
@@ -30,19 +27,19 @@ export default class OpenInMapsActionSheet extends Component {
   }
 
   componentDidMount() {
-    if (this.props.open && this.ActionSheet) {
-      this.ActionSheet.show();
+    if (this.props.open && this.actionSheet) {
+      this.actionSheet.show();
     }
   }
 
   componentWillUnmount() {
-    this.ActionSheet = null;
+    this.actionSheet = null;
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({ cancelIndex: nextProps.apps.length });
-    if (nextProps.open && !this.props.open && this.ActionSheet) {
-      this.ActionSheet.show();
+    this.cancelIndex = nextProps.apps.length;
+    if (nextProps.open && !this.props.open && this.actionSheet) {
+      this.actionSheet.show();
     }
   }
 
@@ -61,8 +58,8 @@ export default class OpenInMapsActionSheet extends Component {
     return (
       <View>
         <ActionSheet
-          ref={(o) => {this.ActionSheet = o}}
-          cancelButtonIndex={this.state.cancelIndex}
+          ref={(o) => {this.actionSheet = o}}
+          cancelButtonIndex={this.cancelIndex}
           title={this.props.title}
           options={this.getOptions()}
           onPress={this.handlePress}
