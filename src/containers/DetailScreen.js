@@ -1,8 +1,10 @@
 import React, { PureComponent } from 'react';
 import {
+  Image,
   ScrollView,
   StyleSheet,
   Text,
+  TouchableHighlight,
   View,
 } from 'react-native';
 import { Button } from 'react-native-elements';
@@ -112,11 +114,12 @@ class DetailScreen extends PureComponent {
           title={name}
         />
         {this.renderDetails(details, tourId, this.props.navigation)}
-        <Button
-          title="Directions"
-          onPress={this.onNavigationPress}
-          style={styles.directionsButton}
-        />
+        <TouchableHighlight onPress={this.onNavigationPress}>
+          <Image
+            style={styles.directionsButton}
+            source={require('../data/tours/tour_0/images/location_0.png')}
+          />
+        </TouchableHighlight>
         <SupportedMapsContainer
           placeDetail={googleMapsParameter}
           open={this.state.displayingDirectionMenu}
@@ -167,6 +170,8 @@ const styles = StyleSheet.create({
   },
   directionsButton: {
     marginBottom: 20,
+    width: '100%',
+    height: 150,
   },
 });
 
