@@ -17,7 +17,6 @@ class CarouselList extends PureComponent {
   };
 
   onPress = (index) => () => {
-    console.log(index);
     const {
       tourId,
       imageList,

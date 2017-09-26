@@ -22,7 +22,6 @@ class CarouselLightbox extends PureComponent {
   }
 
   render() {
-    console.log(this.props.navigation);
     const {
       tourId,
       imageList,
