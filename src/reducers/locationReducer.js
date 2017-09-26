@@ -4,7 +4,6 @@ import {
 
 const defaultState = {
   locationId: 0,
-  completed: false,
 };
 
 export default function (state = defaultState, action = {}) {
@@ -12,7 +11,7 @@ export default function (state = defaultState, action = {}) {
     case SET_LOCATION:
       return {
         ...state,
-        locationId: !action.locationId,
+        locationId: action.locationId,
       };
     default:
       return state;
