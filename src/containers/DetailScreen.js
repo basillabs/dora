@@ -19,27 +19,6 @@ import {
   WHITE_BACKGROUND,
 } from '../constants/colorConstants';
 
-function renderCarousel(carousel) {
-  if (!carousel) {
-    return null;
-  }
-  const images = carousel.map(image => ({ key: image }));
-
-  return (
-    <FlatList
-      style={styles.carouselContainer}
-      data={images}
-      renderItem={({ item }) =>
-        <Image
-          style={styles.carouselImage}
-          source={requireImage(item.key)}
-        />
-      }
-      horizontal
-    />
-  );
-}
-
 class DetailScreen extends PureComponent {
   static propTypes = {
     navigation: PropTypes.object.isRequired,
@@ -69,7 +48,28 @@ class DetailScreen extends PureComponent {
     });
   }
 
-  renderDetails(details) {
+  renderCarousel(carousel, tourId) {
+    if (!carousel) {
+      return null;
+    }
+    const images = carousel.map(image => ({ key: image }));
+
+    return (
+      <FlatList
+        style={styles.carouselContainer}
+        data={images}
+        renderItem={({ item }) =>
+          <Image
+            style={styles.carouselImage}
+            source={requireImage(tourId, item.key)}
+          />
+        }
+        horizontal
+      />
+    );
+  }
+
+  renderDetails(details, tourId) {
     return details.map(detail => (
       <View
         key={detail.title}
@@ -82,7 +82,7 @@ class DetailScreen extends PureComponent {
         <Text style={styles.text}>
           {detail.text}
         </Text>
-        {renderCarousel(detail.carousel)}
+        {this.renderCarousel(detail.carousel, tourId)}
       </View>
     ));
   }
@@ -95,16 +95,20 @@ class DetailScreen extends PureComponent {
       name,
     } = this.props.navigation.state.params.place;
 
+    const tourId = this.props.navigation.state.params.tourId;
+
     return (
       <ScrollView style={styles.container}>
         <Card
           imageName={locationImage}
+          tourId={tourId}
           title={name}
         />
-        {this.renderDetails(details)}
+        {this.renderDetails(details, tourId)}
         <Button
           title="Directions"
           onPress={this.onNavigationPress}
+          style={styles.directionsButton}
         />
         <SupportedMapsContainer
           placeDetail={googleMapsParameter}
@@ -151,6 +155,9 @@ const styles = StyleSheet.create({
     height: 80,
     width: 120,
     marginRight: 20,
+  },
+  directionsButton: {
+    marginBottom: 20,
   },
 });
 

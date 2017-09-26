@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { View, Text, StyleSheet, Modal, ListView } from 'react-native';
 import ActionSheet from 'react-native-actionsheet';
 
-const CANCEL_INDEX = 0;
-
 export default class OpenInMapsActionSheet extends Component {
   static propTypes = {
     apps: PropTypes.array,
