@@ -21,10 +21,6 @@ function mapDispatchToProps(dispatch) {
 }
 
 class IndexScreenContainer extends PureComponent {
-  static navigationOptions = {
-    header: null
-  }
-
   static propTypes = {
     navigation: PropTypes.object.isRequired,
     list: PropTypes.array.isRequired,

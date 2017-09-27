@@ -69,11 +69,7 @@ class DetailScreen extends PureComponent {
 
   static navigationOptions = ({ navigation }) => ({
     title: navigation.state.params.place.detail,
-    headerStyle: {
-      position: 'absolute',
-      top: 0,
-    },
-    headerTintColor: '#FFF',
+    headerTintColor: '#000',
   });
 
   render() {
