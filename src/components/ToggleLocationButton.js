@@ -66,7 +66,6 @@ const styles = StyleSheet.create({
   },
   text: {
     color: '#FFFFFF',
-    flex: 1,
     textAlign: 'center',
   }
 });

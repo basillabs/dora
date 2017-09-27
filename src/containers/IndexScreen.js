@@ -1,16 +1,17 @@
 import React, { PureComponent, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { ScrollView, StyleSheet } from 'react-native';
+import IndexHeader from '../components/IndexHeader';
 import Listing from '../components/Listing';
 import ListingImage from '../components/ListingImage';
 import { setLocation } from '../actions/locationActions';
-import TourSummary from '../components/TourSummary';
 import { requireImage } from '../constants/Images';
 
 const mapStateToProps = state => ({
   list: state.locationListReducer.locations,
   currentLocation: state.tourReducer.currentLocation,
   tourId: state.tourReducer.tourId,
+  tourName: state.tourReducer.tourName,
 });
 
 function mapDispatchToProps(dispatch) {
@@ -20,10 +21,6 @@ function mapDispatchToProps(dispatch) {
 }
 
 class IndexScreenContainer extends PureComponent {
-  static navigationOptions = {
-    title: 'Index',
-  }
-
   static propTypes = {
     navigation: PropTypes.object.isRequired,
     list: PropTypes.array.isRequired,
@@ -42,11 +39,11 @@ class IndexScreenContainer extends PureComponent {
   render() {
     return (
       <ScrollView style={styles.container}>
+        <IndexHeader tourName={this.props.tourName} />
         <ListingImage
           currentLocation={this.props.currentLocation}
           tourRequireImage={this.tourRequireImage}
         />
-        <TourSummary />
         <Listing
           currentLocation={this.props.currentLocation}
           list={this.props.list}

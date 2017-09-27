@@ -15,6 +15,7 @@ export default function (state = defaultState, action = {}) {
         ...state,
         tourId: action.tourId,
         tour: action.tour,
+        tourName: action.tourName,
       };
     default:
       return state;
