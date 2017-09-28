@@ -1,6 +1,6 @@
 import React, { PureComponent, PropTypes } from 'react';
 import { FlatList, StyleSheet } from 'react-native';
-import { CYAN_BORDER } from '../constants/colorConstants';
+import { CYAN_THEME } from '../constants/colorConstants';
 import { List, ListItem, Avatar } from 'react-native-elements';
 import { requireImage } from '../constants/Images';
 
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
   complete: {
-    color: CYAN_BORDER,
+    color: CYAN_THEME,
     fontWeight: 'bold',
   }
 });

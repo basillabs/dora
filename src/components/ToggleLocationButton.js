@@ -4,7 +4,7 @@ import { StyleSheet, TouchableWithoutFeedback, View, Text } from 'react-native';
 import { Tile } from 'react-native-elements';
 import { requireImage } from '../constants/Images';
 import {
-  CYAN_BORDER,
+  CYAN_THEME,
   WHITE_BACKGROUND,
   GREY_BUTTON,
 } from '../constants/colorConstants';
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     backgroundColor: GREY_BUTTON,
   },
   enabled: {
-    backgroundColor: CYAN_BORDER,
+    backgroundColor: CYAN_THEME,
   },
   text: {
     color: '#FFFFFF',
