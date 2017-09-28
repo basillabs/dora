@@ -1,15 +1,20 @@
 import React, { PureComponent } from 'react';
 import {
+  Image,
   ScrollView,
   StyleSheet,
   Text,
+  TouchableHighlight,
   View,
 } from 'react-native';
+import { Button } from 'react-native-elements';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Card from '../components/Card';
 import CarouselList from '../components/Carousel';
 import ToggleLocationButton from '../components/ToggleLocationButton';
+import { requireImage } from '../constants/Images';
+import SupportedMapsContainer from './SupportedMapsContainer';
 import {
   BLACK_MESSAGE,
   BLACK_TITLE,
@@ -31,37 +36,6 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-function renderCarousel(carousel, tourId, navigation) {
-  if (!carousel) {
-    return null;
-  }
-  return (
-    <CarouselList
-      tourId={tourId}
-      imageList={carousel}
-      navigation={navigation}
-    />
-  );
-}
-
-function renderDetails(details, tourId, navigation) {
-  return details.map(detail => (
-    <View
-      key={detail.title}
-      style={styles.detailsContainer}
-    >
-      <Text style={styles.title}>
-        {detail.title}
-      </Text>
-      <View style={styles.halfBorder} />
-      <Text style={styles.text}>
-        {detail.text}
-      </Text>
-      {renderCarousel(detail.carousel, tourId, navigation)}
-    </View>
-  ));
-}
-
 class DetailScreen extends PureComponent {
   static propTypes = {
     navigation: PropTypes.object.isRequired,
@@ -72,10 +46,62 @@ class DetailScreen extends PureComponent {
     headerTintColor: '#000',
   });
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      displayingDirectionMenu: false,
+    };
+  }
+
+  onDirectionsPress = () => {
+    this.setState({
+      displayingDirectionMenu: !this.state.displayingDirectionMenu,
+    });
+  }
+
+  onDirectionsMenuClose = () => {
+    this.setState({
+      displayingDirectionMenu: false,
+    });
+  }
+
+  renderCarousel(carousel, tourId, navigation) {
+    if (!carousel) {
+      return null;
+    }
+    return (
+      <CarouselList
+        tourId={tourId}
+        imageList={carousel}
+        navigation={navigation}
+      />
+    );
+  }
+
+  renderDetails(details, tourId, navigation) {
+    return details.map(detail => (
+      <View
+        key={detail.title}
+        style={styles.detailsContainer}
+      >
+        <Text style={styles.title}>
+          {detail.title}
+        </Text>
+        <View style={styles.halfBorder} />
+        <Text style={styles.text}>
+          {detail.text}
+        </Text>
+        {this.renderCarousel(detail.carousel, tourId, navigation)}
+      </View>
+    ));
+  }
+
   render() {
     const {
       details,
       locationImage,
+      googleMapsParameter,
       name,
     } = this.props.navigation.state.params.place;
 
@@ -88,7 +114,18 @@ class DetailScreen extends PureComponent {
           tourId={tourId}
           title={name}
         />
-        {renderDetails(details, tourId, this.props.navigation)}
+        {this.renderDetails(details, tourId, this.props.navigation)}
+        <TouchableHighlight onPress={this.onDirectionsPress}>
+          <Image
+            style={styles.directionsButton}
+            source={require('../data/tours/tour_0/images/location_0.png')}
+          />
+        </TouchableHighlight>
+        <SupportedMapsContainer
+          placeDetail={googleMapsParameter}
+          open={this.state.displayingDirectionMenu}
+          onClose={this.onDirectionsMenuClose}
+        />
         <ToggleLocationButton {...this.props} />
       </ScrollView>
     );
@@ -123,6 +160,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 20,
     margin: 20,
+  },
+  directionsButton: {
+    marginBottom: 20,
+    width: '100%',
+    height: 150,
   },
 });
 
