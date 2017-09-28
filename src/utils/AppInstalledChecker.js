@@ -2,7 +2,7 @@ import { Platform, Linking } from 'react-native';
 
 const Google = {
   title: 'Open in Google Maps',
-  url: 'https://www.google.com/maps/search/',
+  url: 'https://maps.google.com/maps/search/',
 };
 // https://developers.google.com/waze/api/
 const Waze = {
@@ -44,6 +44,6 @@ export default class AppInstalledChecker {
   }
 
   static open(url, address) {
-    Linking.openURL(`${url}?q=${address}`);
+    Linking.openURL(`${url}?q=${encodeURIComponent(address)}`);
   }
 }
