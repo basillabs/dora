@@ -1,11 +1,13 @@
 import React, { PureComponent, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { ScrollView, StyleSheet } from 'react-native';
-import IndexHeader from '../components/IndexHeader';
+import { ScrollView, StyleSheet, Text } from 'react-native';
 import Listing from '../components/Listing';
 import ListingImage from '../components/ListingImage';
 import { setLocation } from '../actions/locationActions';
 import { requireImage } from '../constants/Images';
+import {
+  CYAN_THEME,
+} from '../constants/colorConstants';
 
 const mapStateToProps = state => ({
   list: state.locationListReducer.locations,
@@ -28,6 +30,13 @@ class IndexScreenContainer extends PureComponent {
     tourId: PropTypes.number.isRequired,
   }
 
+  static navigationOptions = () => ({
+    headerLeft: <Text style={styles.header}>San Francisco</Text>,
+    headerStyle: {
+      backgroundColor: CYAN_THEME,
+    },
+  });
+
   onPress = (place) => {
     const tourId = this.props.tourId;
     this.props.navigation.navigate('Detail', { place, tourId });
@@ -39,7 +48,6 @@ class IndexScreenContainer extends PureComponent {
   render() {
     return (
       <ScrollView style={styles.container}>
-        <IndexHeader tourName={this.props.tourName} />
         <ListingImage
           currentLocation={this.props.currentLocation}
           tourRequireImage={this.tourRequireImage}
@@ -60,6 +68,12 @@ class IndexScreenContainer extends PureComponent {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  header: {
+    fontSize: 30,
+    fontWeight: 'bold',
+    color: '#FFF',
+    marginLeft: 20,
   },
 });
 

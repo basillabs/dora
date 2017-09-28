@@ -18,7 +18,7 @@ import SupportedMapsContainer from './SupportedMapsContainer';
 import {
   BLACK_MESSAGE,
   BLACK_TITLE,
-  CYAN_BORDER,
+  CYAN_THEME,
   WHITE_BACKGROUND,
 } from '../constants/colorConstants';
 import { toggleLocation } from '../actions/locationListActions';
@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
     marginRight: 20,
   },
   halfBorder: {
-    backgroundColor: CYAN_BORDER,
+    backgroundColor: CYAN_THEME,
     width: 40,
     height: 2,
     marginLeft: 20,
