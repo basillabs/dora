@@ -29,6 +29,8 @@ build/
 .gradle
 local.properties
 *.iml
+/android/fastlane/key.json
+/android/app/basil-android.keystore
 
 # node.js
 #

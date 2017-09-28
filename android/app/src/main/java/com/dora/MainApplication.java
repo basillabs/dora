@@ -1,4 +1,4 @@
-package com.dora;
+package org.basiltech.missionmap;
 
 import android.app.Application;
 import android.util.Log;
