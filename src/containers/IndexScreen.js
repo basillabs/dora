@@ -31,7 +31,7 @@ class IndexScreenContainer extends PureComponent {
   }
 
   static navigationOptions = () => ({
-    headerLeft: <Text style={styles.header}>San Francisco</Text>,
+    headerLeft: <Text style={styles.headerText}>San Francisco</Text>,
     headerStyle: {
       backgroundColor: CYAN_THEME,
     },
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  header: {
+  headerText: {
     fontSize: 30,
     fontWeight: 'bold',
     color: '#FFF',
