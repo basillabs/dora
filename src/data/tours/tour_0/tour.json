@@ -14,6 +14,7 @@
       "duration": 120,
       "locationImage": "bayview0",
       "thumbnail": "bayview0",
+      "mapImage": "location_0",
       "completed": false,
       "details": [
         {
@@ -41,6 +42,7 @@
       "duration": 60,
       "locationImage": "cathedral0",
       "thumbnail": "cathedral0",
+      "mapImage": "location_1",
       "completed": false,
       "details": [
         {
@@ -67,6 +69,7 @@
       "duration": 90,
       "locationImage": "landsend0",
       "thumbnail": "landsend0",
+      "mapImage": "location_2",
       "completed": false,
       "details": [
         {
@@ -90,6 +93,7 @@
       "duration": 180,
       "locationImage": "glide0",
       "thumbnail": "glide0",
+      "mapImage": "location_3",
       "completed": false,
       "details": [
         {
@@ -117,6 +121,7 @@
       "duration": 90,
       "locationImage": "davidson0",
       "thumbnail": "davidson0",
+      "mapImage": "location_4",
       "completed": false,
       "details": [
         {
@@ -144,6 +149,7 @@
       "duration": 90,
       "locationImage": "castro0",
       "thumbnail": "castro0",
+      "mapImage": "location_5",
       "completed": false,
       "details": [
         {
@@ -171,6 +177,7 @@
       "duration": 240,
       "locationImage": "hya0",
       "thumbnail": "hya0",
+      "mapImage": "location_6",
       "completed": false,
       "details": [
         {
@@ -197,6 +204,7 @@
       "duration": 120,
       "locationImage": "sfch0",
       "thumbnail": "sfch0",
+      "mapImage": "location_7",
       "completed": false,
       "details": [
         {

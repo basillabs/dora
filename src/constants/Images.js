@@ -3,8 +3,24 @@ export function requireImage(tourId, imageName) {
   switch (tourId) {
     case 0:
       switch (imageName) {
-        case 'FIXME_map_placeholder':
-          return require('../data/tours/tour_0/images/FIXME_map_placeholder.png');
+        case 'location_global':
+          return require('../data/tours/tour_0/images/location_global.png');
+        case 'location_0':
+          return require('../data/tours/tour_0/images/location_0.png');
+        case 'location_1':
+          return require('../data/tours/tour_0/images/location_1.png');
+        case 'location_2':
+          return require('../data/tours/tour_0/images/location_2.png');
+        case 'location_3':
+          return require('../data/tours/tour_0/images/location_3.png');
+        case 'location_4':
+          return require('../data/tours/tour_0/images/location_4.png');
+        case 'location_5':
+          return require('../data/tours/tour_0/images/location_5.png');
+        case 'location_6':
+          return require('../data/tours/tour_0/images/location_6.png');
+        case 'location_7':
+          return require('../data/tours/tour_0/images/location_7.png');
         case 'bayview0':
           return require('../data/tours/tour_0/images/bayview0.png');
         case 'bayview1':
