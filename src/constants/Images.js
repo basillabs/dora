@@ -3,11 +3,13 @@ export function requireImage(tourId, imageName) {
   switch (tourId) {
     case 0:
       switch (imageName) {
+        case 'FIXME_map_placeholder':
+          return require('../data/tours/tour_0/images/FIXME_map_placeholder.png');
         case 'bayview0':
           return require('../data/tours/tour_0/images/bayview0.png');
         case 'bayview1':
           return require('../data/tours/tour_0/images/bayview1.png');
-        case 'location_2':
+        case 'bayview2':
           return require('../data/tours/tour_0/images/bayview2.png');
         case 'castro0':
           return require('../data/tours/tour_0/images/castro0.png');

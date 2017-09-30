@@ -15,7 +15,7 @@ export default class ListingImage extends PureComponent {
     return (
       <Tile
         featured
-        imageSrc={this.props.tourRequireImage(`location_${this.props.currentLocation}.png`)}
+        imageSrc={this.props.tourRequireImage('FIXME_map_placeholder')}
       />
     );
   }
