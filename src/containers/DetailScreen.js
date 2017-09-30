@@ -118,7 +118,7 @@ class DetailScreen extends PureComponent {
         <TouchableHighlight onPress={this.onDirectionsPress}>
           <Image
             style={styles.directionsButton}
-            source={require('../data/tours/tour_0/images/location_0.png')}
+            source={require('../data/tours/tour_0/images/bayview0.png')}
           />
         </TouchableHighlight>
         <SupportedMapsContainer
