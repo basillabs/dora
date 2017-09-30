@@ -1,147 +1,214 @@
 {
   "tourId": "0",
   "tourName": "San Francisco",
-  "tourDuration": "102",
-  "locations": [{
+  "tourDuration": 1110,
+  "locations": [
+    {
       "id": 0,
-      "name": "vive la tarte",
-      "short_address": "1160 Howard St",
+      "name": "Project Bayview",
+      "short_address": "4100 3rd St.",
       "googleMapsParameter": {
-        "name": "Vive la tarte",
-        "address": "1160 Howard St, San Francisco, CA 94103"
+        "name": "Project Bayview",
+        "address": "4100 3rd St, San Francisco, CA 94124"
       },
-      "locationImage": "vive-la-tarte",
-      "thumbnail": "vive-la-tarte",
+      "duration": 120,
+      "locationImage": "bayview0",
+      "thumbnail": "bayview0",
       "completed": false,
       "details": [
         {
           "title": "Overview",
-          "text": "Lofty, industrial-chic Belgian bakery with an open kitchen for tarts, plus coffee, tea & juice.",
+          "text": "Project Bayview is a Christian non-profit located in the Hunters Point/Bayview area of San Francisco. Bayview makes up for less than 1% of San Francisco’s population and accounts for over 50% of San Francisco’s violent crimes. It is an area filled with gangs and drugs with limited resources, education and opportunities.\n\nThe goal of Project Bayview is to invite people from the community coming out of gangs, prison and addiction into a life of discipleship and following Jesus. The 4100 3rd Street building was once a brothel and a saloon and has been converted into a men’s discipleship house and a missional restaurant business called Huli Huli’s. Huli Huli is a Hawaiian culinary term meaning “turn, turn”. The founders of this ministry thought it appropriate to name the restaurant that because of its mission to see lives turned around.",
           "carousel": [
-              "vive-la-tarte",
-              "chez-maman",
-              "trestle"
+            "bayview1",
+            "bayview2"
           ]
         },
         {
-          "title": "Spiritual Needs",
-          "text": "Eat a tart here too. Deliciousness."
+          "title": "Tasks",
+          "text": "5 minutes: Watch the Project Bayview Video: https://vimeo.com/86952213\n60 minutes: Eat lunch at Huli Huli’s and get to know some of the staff\n30 minutes: Get a tour of the discipleship home from Kevin Shedden\n25 minutes: Go on a prayer walk around the block and pray for the community"
         }
       ]
     },
     {
       "id": 1,
-      "name": "Chez Maman",
-      "short_address": "401 Gough St",
+      "name": "Cathedral of Saint Mary of the Assumption",
+      "short_address": "1111 Gough St, ",
       "googleMapsParameter": {
-        "name": "Chez Maman",
-        "address": "401 Gough St, San Francisco, CA 94102"
+        "name": "Cathedral of Saint Mary of the Assumption",
+        "address": "1111 Gough St, San Francisco, CA 94109"
       },
-      "locationImage": "chez-maman",
-      "thumbnail": "chez-maman",
+      "duration": 60,
+      "locationImage": "cathedral0",
+      "thumbnail": "cathedral0",
       "completed": false,
       "details": [
         {
           "title": "Overview",
-          "text": "Cozy, informal eatery serving French bistro classics ranging from burgers & crêpes to mussels."
+          "text": "The Cathedral of Saint Mary of the Assumption, also known as Saint Mary’s Cathedral, is a church part of the Roman Catholic Archdiocese of San Francisco. Known to be a sacred place where ancient faith and modern technology intertwine, Saint Mary’s is a popular destination for both those interested in faith and those interested in design/architecture.\n\nThe Cathedral of St. Mary of the Assumption is an artistic and architectural poem evocative of the union between heaven and earth attained for us in Jesus Christ. The balance and simplicity of modern engineering echo the union of human and divine in creation and life. Faith and art combine to create in our contemporary world a worthy heir to the beautiful churches of the past.\n\nThe cathedral’s saddle roof is composed of eight segments of hyperbolic paraboloids, in such a fashion that the bottom horizontal cross section of the roof is a square and the top cross section is a cross. Like the Cross itself, St. Mary's Cathedral moves us both vertically and horizontally. As ones eyes are drawn upward in the graceful sweep of the cupola, hearts are lifted up to God.",
+          "carousel": [
+            "cathedral1"
+          ]
         },
         {
-          "title": "Spiritual Needs",
-          "text": "We should pray for all the French people who come here. Order some mussels. Order a burger. Pay the bill."
+          "title": "Tasks",
+          "text": "30 minutes: Tour the cathedral\n30 minutes: Observe the open windows and pray for SF and the need to work for the Kingdom of God on earth"
         }
       ]
     },
     {
       "id": 2,
-      "name": "Sweet Maple",
-      "short_address": "2101 Sutter St",
+      "name": "Lands End Labyrinth",
+      "short_address": "680 Point Lobos Ave.",
       "googleMapsParameter": {
-        "name": "Sweet Maple",
-        "address": "2101 Sutter St, San Francisco, CA 94115"
+        "name": "Lands End",
+        "address": "680 Point Lobos Ave, San Francisco, CA 94121"
       },
-      "locationImage": "sweet-maple",
-      "thumbnail": "sweet-maple",
+      "duration": 90,
+      "locationImage": "landsend0",
+      "thumbnail": "landsend0",
       "completed": false,
       "details": [
         {
           "title": "Overview",
-          "text": "Local spot for homemade morning/lunch fare like signature brown-sugar-glazed 'millionaire’s bacon.'"
+          "text": "The Lands End Labyrinth was constructed by local artist Eduardo Aguilera, overlooking the Golden Gate Bridge. Although the labyrinth was destroyed, presumably by vandals, in August 2015, it was rebuilt a month later by the original artist with the help of 50 volunteers. From here, the views of the Golden Gate Bridge are outstanding from this vantage point."
         },
         {
-          "title": "Spiritual Needs",
-          "text": "We should pray for all the people who come here to eat brunch. Put your name on the list. Order an eggs benedict. Instagram your brunch."
-        },
-        {
-          "title": "History",
-          "text": "Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo Filler text yo"
+          "title": "Tasks",
+          "text": "1 hour: Hike from Sutro Baths to Lands End\n\n30 minutes: Prayer walk through the Labyrinth path"
         }
       ]
     },
     {
       "id": 3,
-      "name": "Salt&Straw",
-      "short_address": "2201 Fillmore St",
+      "name": "Glide Memorial Church",
+      "short_address": "330 Ellis St.",
       "googleMapsParameter": {
-        "name": "Salt & Straw",
-        "address": "2201 Fillmore St, San Francisco, CA 94115"
+        "name": "Glide Memorial Church",
+        "address": "330 Ellis St, San Francisco, CA 94102"
       },
-      "locationImage": "salt-and-straw",
-      "thumbnail": "salt-and-straw",
+      "duration": 180,
+      "locationImage": "glide0",
+      "thumbnail": "glide0",
       "completed": false,
       "details": [
         {
           "title": "Overview",
-          "text": "Quirky flavors & handmade waffle cones draw crowds to this artisanal ice cream maker."
+          "text": "Glide Memorial Church is a historic church in San Francisco affiliated with the United Methodist Church. Although conservative until the 1960s, since then it has served as a counter-culture rallying point and has been one of the most prominently liberal churches in the United States.\n\nGlide is also famous for its Gospel Choir and numerous social service programs. Its contributions to the community have been recognized by public figures such as Maya Angelou, Oprah Winfrey, Bill Clinton and Warren Buffett.",
+          "carousel": [
+            "glide1",
+            "glide2"
+          ]
         },
         {
-          "title": "Spiritual Needs",
-          "text": "This ice cream will change people's lives. Make sure to taste the monthly flavors, as well as the local ones. Stand in line. Taste all of the ice cream. Order your favorite flavor. Tip the ice cream scooper. Eat your ice cream before it melts. Tell all your friends about this place."
+          "title": "Tasks",
+          "text": "1 hour: Meet and talk to Paula Farmer, the leader of Glide’s PRIDE team. Learn about how this particular church views the place of the gospel as it intersects with culture\n\n1 hour: Volunteer at Glide’s famous food kitchen and get to know the people of the Tenderloin\n\n30 min: Go on a prayer walk around the Tenderloin and pray for the community"
         }
       ]
     },
     {
       "id": 4,
-      "name": "Mr. Holmes Bakehouse",
-      "short_address": "1042 Larkin St",
+      "name": "The Cross at Mt. Davidson",
+      "short_address": "125 Dalewood Way",
       "googleMapsParameter": {
-        "name": "Mr. Holmes Bakehouse",
-        "address": "1042 Larkin St, San Francisco, CA 94109"
+        "name": "Mount Davidson Cross",
+        "address": "125 Dalewood Way, San Francisco, CA 94127"
       },
-      "locationImage": "mr-holmes-bakehouse",
-      "thumbnail": "mr-holmes-bakehouse",
+      "duration": 90,
+      "locationImage": "davidson0",
+      "thumbnail": "davidson0",
       "completed": false,
       "details": [
         {
           "title": "Overview",
-          "text": "Bakery serving a mix of tarts, donuts & croissant-muffins, plus coffee in a cozy, bright space."
+          "text": "The cross atop Mt. Davidson was erected by the resolve and perseverance of the local Christian communities that invested decades in trying to construct a lasting icon of their faith.  In 1923, George Decatur, official of the Western Union Telegraph Co., Director of the YMCA, and resident of San Francisco, organized the first sunrise service, drawing over 5,000 attendees. In 1931 arsonists burned down the cross. In 1933, during the depression, Margaret May Morgan, the first woman to sit on the San Francisco Board of Supervisors, and others on the Easter Sunrise Committee, solicited $1+ contributions to build a concrete Cross. On March 25, 1934, one week before Easter, Franklin D. Roosevelt pressed a golden telegraph key in Washington, D.C. to light up the cross in front of an audience of 50,000.\n\nIn 1991, several organizations, including the Americans United for Separation of Church and State, sued the City of San Francisco for owning a cross on city (public) land, and several court battles ensued. Eventually the courts forced the City to either tear down the Cross or sell it to a private entity.\n\nOn July 12, 1997, the Council of Armenian-American Organizations of Northern California (CAAONC), a coalition of over 30 Armenian-American Organizations outbid other groups and purchased the Cross from the City of San Francisco. The sale was unanimously approved by the San Francisco Board of Supervisors and placed on the ballot as Proposition F. On November 4, 1997, the voters of San Francisco overwhelmingly voted to approve the sale. The CAAONC thus became the legal owner of the Mt. Davidson Cross and assumed the responsibility for maintaining it.\n\nThe cross can be seen from all around the city when it is lit up, on Easter and on April 24th, Armenian Genocide Memorial Day.",
+          "carousel": [
+            "davidson1",
+            "davidson2"
+          ]
         },
         {
-          "title": "Spiritual Needs",
-          "text": "Pray the cruffins haven't run out. Get there early. Order your cruffin and take a picture of it with the sign, then post on social media."
+          "title": "Tasks",
+          "text": "30 min: Hike to the top of Mt. Davidson\n1 hours: Pray and meditate on God’s heart for San Francisco\n"
         }
       ]
     },
     {
       "id": 5,
-      "name": "Trestle",
-      "summary": "New American restaurant offering 3-course fixed-price meals in a quaint space with modern flair.",
-      "spiritualSignificance": "Pray people have enough money to give to the kingdom after eating here.",
-      "short_address": "531 Jackson St",
+      "name": "Hot Cookie",
+      "short_address": "407 Castro St.",
       "googleMapsParameter": {
-        "name": "Trestle",
-        "address": "531 Jackson St, San Francisco, CA 94111"
+        "name": "Hot Cookie",
+        "address": "407 Castro St, San Francisco, CA 94114"
       },
-      "locationImage": "trestle",
-      "thumbnail": "trestle",
+      "duration": 90,
+      "locationImage": "castro0",
+      "thumbnail": "castro0",
       "completed": false,
       "details": [
         {
           "title": "Overview",
-          "text": "New American restaurant offering 3-course fixed-price meals in a quaint space with modern flair."
+          "text": "The Castro District is one of the most famous gay neighborhoods in the world. Having transformed from a working-class neighborhood through the 1960s and 1970s, the Castro remains one of the most prominent symbols of lesbian, gay, bisexual, and transgender (LGBT) activism and events in the world.\n\nCastro & Market is the historical heart of the Gay/Lesbian community so most new visitors will start from somewhere near here.",
+          "carousel": [
+            "castro1",
+            "castro2"
+          ]
         },
         {
-          "title": "Spiritual Needs",
-          "text": "Pray people have enough money to give to the kingdom after eating here. Make a reservation. Sit down and eat."
+          "title": "Tasks",
+          "text": "30 min: Walk Castro street and learn about this historical and culturally powerful neighborhood\n1 hour: Eat lunch in the Castro\n30 min: Head over the Hot Cookie, one of the most famous cookie spots in the Castro, and try a cookie there for dessert.\n"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Homeless Youth Alliance",
+      "short_address": "1696 Haight St.",
+      "googleMapsParameter": {
+        "name": "Homeless Youth Alliance",
+        "address": "1696 Haight St, San Francisco, CA 94117"
+      },
+      "duration": 240,
+      "locationImage": "hya0",
+      "thumbnail": "hya0",
+      "completed": false,
+      "details": [
+        {
+          "title": "Overview",
+          "text": "In 1992, the City of San Francisco commissioned a study of homeless youth in the Haight Ashbury district. This study demonstrated that homeless young people have a high incidence of health and psychological problems as well as a lack of access to health and human services. In response, coordinated efforts to reach these youth began springing up in the Haight. Two such efforts were the San Francisco Needle Exchange (SFNE) and the Haight Ashbury Youth Outreach Team (HAYOT). It was with HAYOT that Mary Howe, a formerly homeless youth herself, began to work with youth in the neighborhood.\n\nIn 2006, seven years after Mary first got involved, she merged the two organizations to form Homeless Youth Alliance: the city’s only grassroots harm reduction coalition designed by and for the marginalized and underserved youth experiencing homelessness of the Haight Ashbury district. Mary along side dedicated staff and the youth we work with has shaped and built an agency that reaches 13,000 at-risk youth annually, providing a drop-in center, harm reduction education, and medical and mental health services. HYA is the only youth-focused agency in San Francisco whose staff mirrors the target population it serves: most of the agency’s 14 staff and 30 volunteers have histories that include homelessness, many of whom utilized HYA’s services while living on the street. HYA trains constituents to be peer educators, helping them transcend the conditioned passivity and powerlessness that lead to self-destructive choices. As a result, many former participants have gone on to pursue careers in human services and counseling.",
+          "carousel": [
+            "hya1"
+          ]
+        },
+        {
+          "title": "Tasks",
+          "text": "1 hour: Spend time with the staff at Homeless Youth Alliance and get to know their work\n3 hours: Join HYA on one of their outreaches to homeless youth"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "City Hall",
+      "short_address": "1 Dr. Carlton B. Goodlett Place",
+      "googleMapsParameter": {
+        "name": "San Francisco City Hall",
+        "address": "1 Dr Carlton B Goodlett Pl, San Francisco, CA 94102"
+      },
+      "duration": 120,
+      "locationImage": "sfch0",
+      "thumbnail": "sfch0",
+      "completed": false,
+      "details": [
+        {
+          "title": "Overview",
+          "text": "City Hall represents the political and cultural power structures of San Francisco.\n\nThe City Hall you see today took two years to build. Steel, granite, and four floors of white marble interiors make up San Francisco's symbol of resilience, built after the previous City Hall was destroyed in the Great Earthquake and Fire of April 18, 1906.\n\nCivic leaders were determined to demonstrate the city's rebirth in time for the start of the World's Fair of 1915. Designed by architect Arthur Brown, Jr. and begun in 1913, natives and the world were suitably awed by the gilt exterior detailing, the sweeping grand staircase, and the massive dome. At 307 feet in height, the dome is a full 42 feet taller than the dome of the nation's capitol.\n\nDuring the past century, the building has seen major political upheavals and demographic shifts in the makeup of its legislators. City Hall is often a focus of drama: the tragic assassinations of 1979; and jubilation, when same-sex marriages were first performed in 2004. Once the repository of records and a site for smaller courts, current debates and decisions about labor, land use, and public policy issues take place inside on a regular basis.",
+          "carousel": [
+            "sfch1"
+          ]
+        },
+        {
+          "title": "Tasks",
+          "text": "1 hour: Explore City Hall and take note of any spiritual insights God may be giving you here\n1 hour: Explore the areas around City Hall and gather together to pray for all the politicians and government workers here."
         }
       ]
     }
