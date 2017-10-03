@@ -108,12 +108,20 @@ class DetailScreen extends PureComponent {
 
     const tourId = this.props.navigation.state.params.tourId;
 
+    // hacks
+    const allImages = details
+      .map((detail) => { return detail.carousel; })
+      .filter((element) => { return element !== undefined; })
+      .reduce((a, b) => { return a.concat(b) });
+
     return (
       <ScrollView contentContainerStyle={styles.container}>
         <Card
           imageName={locationImage}
           tourId={tourId}
           title={name}
+          navigation={this.props.navigation}
+          imageList={allImages}
         />
         {this.renderDetails(details, tourId, this.props.navigation)}
         <TouchableHighlight onPress={this.onDirectionsPress}>

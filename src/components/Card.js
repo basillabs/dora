@@ -9,8 +9,22 @@ export default class Card extends PureComponent {
     imageName: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     tourId: PropTypes.number.isRequired,
+    navigation: PropTypes.object.isRequired,
+    imageList: PropTypes.array.isRequired,
   }
   static defaultProps = {}
+
+  onPress = () => {
+    const {
+      tourId,
+      imageList,
+    } = this.props;
+
+    this.props.navigation.navigate('Lightbox', {
+      tourId,
+      imageList
+    });
+  }
 
   render() {
     const {
@@ -26,6 +40,7 @@ export default class Card extends PureComponent {
         imageSrc={requireImage(tourId, imageName)}
         title={title}
         titleStyle={styles.title}
+        onPress={() => this.onPress()}
         featured
       />
     );
