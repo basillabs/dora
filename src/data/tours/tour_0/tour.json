@@ -23,11 +23,13 @@
           "carousel": [
             "bayview1",
             "bayview2"
+          ],
+          "tasks": [
+            "5 minutes: Watch the Project Bayview Video: https://vimeo.com/86952213",
+            "60 minutes: Eat lunch at Huli Huli’s and get to know some of the staff",
+            "30 minutes: Get a tour of the discipleship home from Kevin Shedden",
+            "25 minutes: Go on a prayer walk around the block and pray for the community"
           ]
-        },
-        {
-          "title": "Tasks",
-          "text": "5 minutes: Watch the Project Bayview Video: https://vimeo.com/86952213\n60 minutes: Eat lunch at Huli Huli’s and get to know some of the staff\n30 minutes: Get a tour of the discipleship home from Kevin Shedden\n25 minutes: Go on a prayer walk around the block and pray for the community"
         }
       ]
     },
