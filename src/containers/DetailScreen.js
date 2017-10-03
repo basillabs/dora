@@ -101,6 +101,7 @@ class DetailScreen extends PureComponent {
     const {
       details,
       locationImage,
+      mapImage,
       googleMapsParameter,
       name,
     } = this.props.navigation.state.params.place;
@@ -118,7 +119,7 @@ class DetailScreen extends PureComponent {
         <TouchableHighlight onPress={this.onDirectionsPress}>
           <Image
             style={styles.directionsButton}
-            source={require('../data/tours/tour_0/images/location_0.png')}
+            source={requireImage(tourId, mapImage)}
           />
         </TouchableHighlight>
         <SupportedMapsContainer
