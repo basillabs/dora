@@ -32,7 +32,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": 1,
       "name": "The Cross at Mt. Davidson",
       "short_address": "125 Dalewood Way",
       "googleMapsParameter": {
@@ -60,7 +60,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": 2,
       "name": "Hot Cookie",
       "short_address": "407 Castro St.",
       "googleMapsParameter": {
@@ -88,7 +88,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": 3,
       "name": "Homeless Youth Alliance",
       "short_address": "1696 Haight St.",
       "googleMapsParameter": {
@@ -115,7 +115,7 @@
       ]
     },   
     {
-      "id": 7,
+      "id": 4,
       "name": "City Hall",
       "short_address": "1 Dr. Carlton B. Goodlett Place",
       "googleMapsParameter": {
@@ -142,7 +142,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 5,
       "name": "Glide Memorial Church",
       "short_address": "330 Ellis St.",
       "googleMapsParameter": {
@@ -170,7 +170,7 @@
       ]
     },    
     {
-      "id": 1,
+      "id": 6,
       "name": "Cathedral of Saint Mary of the Assumption",
       "short_address": "1111 Gough St, ",
       "googleMapsParameter": {
@@ -197,7 +197,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 7,
       "name": "Lands End Labyrinth",
       "short_address": "680 Point Lobos Ave.",
       "googleMapsParameter": {
