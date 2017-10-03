@@ -32,85 +32,6 @@
       ]
     },
     {
-      "id": 1,
-      "name": "Cathedral of Saint Mary of the Assumption",
-      "short_address": "1111 Gough St, ",
-      "googleMapsParameter": {
-        "name": "Cathedral of Saint Mary of the Assumption",
-        "address": "1111 Gough St, San Francisco, CA 94109"
-      },
-      "duration": 60,
-      "locationImage": "cathedral0",
-      "thumbnail": "cathedral0",
-      "mapImage": "location_1",
-      "completed": false,
-      "details": [
-        {
-          "title": "Overview",
-          "text": "The Cathedral of Saint Mary of the Assumption, also known as Saint Mary’s Cathedral, is a church part of the Roman Catholic Archdiocese of San Francisco. Known to be a sacred place where ancient faith and modern technology intertwine, Saint Mary’s is a popular destination for both those interested in faith and those interested in design/architecture.\n\nThe Cathedral of St. Mary of the Assumption is an artistic and architectural poem evocative of the union between heaven and earth attained for us in Jesus Christ. The balance and simplicity of modern engineering echo the union of human and divine in creation and life. Faith and art combine to create in our contemporary world a worthy heir to the beautiful churches of the past.\n\nThe cathedral’s saddle roof is composed of eight segments of hyperbolic paraboloids, in such a fashion that the bottom horizontal cross section of the roof is a square and the top cross section is a cross. Like the Cross itself, St. Mary's Cathedral moves us both vertically and horizontally. As ones eyes are drawn upward in the graceful sweep of the cupola, hearts are lifted up to God.",
-          "carousel": [
-            "cathedral1"
-          ]
-        },
-        {
-          "title": "Tasks",
-          "text": "30 minutes: Tour the cathedral\n30 minutes: Observe the open windows and pray for SF and the need to work for the Kingdom of God on earth"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "name": "Lands End Labyrinth",
-      "short_address": "680 Point Lobos Ave.",
-      "googleMapsParameter": {
-        "name": "Lands End",
-        "address": "680 Point Lobos Ave, San Francisco, CA 94121"
-      },
-      "duration": 90,
-      "locationImage": "landsend0",
-      "thumbnail": "landsend0",
-      "mapImage": "location_2",
-      "completed": false,
-      "details": [
-        {
-          "title": "Overview",
-          "text": "The Lands End Labyrinth was constructed by local artist Eduardo Aguilera, overlooking the Golden Gate Bridge. Although the labyrinth was destroyed, presumably by vandals, in August 2015, it was rebuilt a month later by the original artist with the help of 50 volunteers. From here, the views of the Golden Gate Bridge are outstanding from this vantage point."
-        },
-        {
-          "title": "Tasks",
-          "text": "1 hour: Hike from Sutro Baths to Lands End\n\n30 minutes: Prayer walk through the Labyrinth path"
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "name": "Glide Memorial Church",
-      "short_address": "330 Ellis St.",
-      "googleMapsParameter": {
-        "name": "Glide Memorial Church",
-        "address": "330 Ellis St, San Francisco, CA 94102"
-      },
-      "duration": 180,
-      "locationImage": "glide0",
-      "thumbnail": "glide0",
-      "mapImage": "location_3",
-      "completed": false,
-      "details": [
-        {
-          "title": "Overview",
-          "text": "Glide Memorial Church is a historic church in San Francisco affiliated with the United Methodist Church. Although conservative until the 1960s, since then it has served as a counter-culture rallying point and has been one of the most prominently liberal churches in the United States.\n\nGlide is also famous for its Gospel Choir and numerous social service programs. Its contributions to the community have been recognized by public figures such as Maya Angelou, Oprah Winfrey, Bill Clinton and Warren Buffett.",
-          "carousel": [
-            "glide1",
-            "glide2"
-          ]
-        },
-        {
-          "title": "Tasks",
-          "text": "1 hour: Meet and talk to Paula Farmer, the leader of Glide’s PRIDE team. Learn about how this particular church views the place of the gospel as it intersects with culture\n\n1 hour: Volunteer at Glide’s famous food kitchen and get to know the people of the Tenderloin\n\n30 min: Go on a prayer walk around the Tenderloin and pray for the community"
-        }
-      ]
-    },
-    {
       "id": 4,
       "name": "The Cross at Mt. Davidson",
       "short_address": "125 Dalewood Way",
@@ -192,7 +113,7 @@
           "text": "1 hour: Spend time with the staff at Homeless Youth Alliance and get to know their work\n3 hours: Join HYA on one of their outreaches to homeless youth"
         }
       ]
-    },
+    },   
     {
       "id": 7,
       "name": "City Hall",
@@ -217,6 +138,85 @@
         {
           "title": "Tasks",
           "text": "1 hour: Explore City Hall and take note of any spiritual insights God may be giving you here\n1 hour: Explore the areas around City Hall and gather together to pray for all the politicians and government workers here."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Glide Memorial Church",
+      "short_address": "330 Ellis St.",
+      "googleMapsParameter": {
+        "name": "Glide Memorial Church",
+        "address": "330 Ellis St, San Francisco, CA 94102"
+      },
+      "duration": 180,
+      "locationImage": "glide0",
+      "thumbnail": "glide0",
+      "mapImage": "location_3",
+      "completed": false,
+      "details": [
+        {
+          "title": "Overview",
+          "text": "Glide Memorial Church is a historic church in San Francisco affiliated with the United Methodist Church. Although conservative until the 1960s, since then it has served as a counter-culture rallying point and has been one of the most prominently liberal churches in the United States.\n\nGlide is also famous for its Gospel Choir and numerous social service programs. Its contributions to the community have been recognized by public figures such as Maya Angelou, Oprah Winfrey, Bill Clinton and Warren Buffett.",
+          "carousel": [
+            "glide1",
+            "glide2"
+          ]
+        },
+        {
+          "title": "Tasks",
+          "text": "1 hour: Meet and talk to Paula Farmer, the leader of Glide’s PRIDE team. Learn about how this particular church views the place of the gospel as it intersects with culture\n\n1 hour: Volunteer at Glide’s famous food kitchen and get to know the people of the Tenderloin\n\n30 min: Go on a prayer walk around the Tenderloin and pray for the community"
+        }
+      ]
+    },    
+    {
+      "id": 1,
+      "name": "Cathedral of Saint Mary of the Assumption",
+      "short_address": "1111 Gough St, ",
+      "googleMapsParameter": {
+        "name": "Cathedral of Saint Mary of the Assumption",
+        "address": "1111 Gough St, San Francisco, CA 94109"
+      },
+      "duration": 60,
+      "locationImage": "cathedral0",
+      "thumbnail": "cathedral0",
+      "mapImage": "location_1",
+      "completed": false,
+      "details": [
+        {
+          "title": "Overview",
+          "text": "The Cathedral of Saint Mary of the Assumption, also known as Saint Mary’s Cathedral, is a church part of the Roman Catholic Archdiocese of San Francisco. Known to be a sacred place where ancient faith and modern technology intertwine, Saint Mary’s is a popular destination for both those interested in faith and those interested in design/architecture.\n\nThe Cathedral of St. Mary of the Assumption is an artistic and architectural poem evocative of the union between heaven and earth attained for us in Jesus Christ. The balance and simplicity of modern engineering echo the union of human and divine in creation and life. Faith and art combine to create in our contemporary world a worthy heir to the beautiful churches of the past.\n\nThe cathedral’s saddle roof is composed of eight segments of hyperbolic paraboloids, in such a fashion that the bottom horizontal cross section of the roof is a square and the top cross section is a cross. Like the Cross itself, St. Mary's Cathedral moves us both vertically and horizontally. As ones eyes are drawn upward in the graceful sweep of the cupola, hearts are lifted up to God.",
+          "carousel": [
+            "cathedral1"
+          ]
+        },
+        {
+          "title": "Tasks",
+          "text": "30 minutes: Tour the cathedral\n30 minutes: Observe the open windows and pray for SF and the need to work for the Kingdom of God on earth"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Lands End Labyrinth",
+      "short_address": "680 Point Lobos Ave.",
+      "googleMapsParameter": {
+        "name": "Lands End",
+        "address": "680 Point Lobos Ave, San Francisco, CA 94121"
+      },
+      "duration": 90,
+      "locationImage": "landsend0",
+      "thumbnail": "landsend0",
+      "mapImage": "location_2",
+      "completed": false,
+      "details": [
+        {
+          "title": "Overview",
+          "text": "The Lands End Labyrinth was constructed by local artist Eduardo Aguilera, overlooking the Golden Gate Bridge. Although the labyrinth was destroyed, presumably by vandals, in August 2015, it was rebuilt a month later by the original artist with the help of 50 volunteers. From here, the views of the Golden Gate Bridge are outstanding from this vantage point."
+        },
+        {
+          "title": "Tasks",
+          "text": "1 hour: Hike from Sutro Baths to Lands End\n\n30 minutes: Prayer walk through the Labyrinth path"
         }
       ]
     }
