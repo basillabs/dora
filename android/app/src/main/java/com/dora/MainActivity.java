@@ -1,4 +1,4 @@
-package com.dora;
+package org.basiltech.missionmap;
 
 import com.facebook.react.ReactActivity;
 
