@@ -1,6 +1,6 @@
 import React, { PureComponent, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { ScrollView, StyleSheet, Text } from 'react-native';
+import { View, StatusBar, ScrollView, StyleSheet, Text, Image } from 'react-native';
 import Listing from '../components/Listing';
 import ListingImage from '../components/ListingImage';
 import { setLocation } from '../actions/locationActions';
@@ -31,7 +31,10 @@ class IndexScreenContainer extends PureComponent {
   }
 
   static navigationOptions = () => ({
-    headerLeft: <Text style={styles.headerText}>San Francisco</Text>,
+    headerLeft: 
+      <Image source={requireImage(0, 'headerImage')}>
+        <Text style={styles.headerText}>San Francisco</Text>
+      </Image>,
     headerStyle: {
       backgroundColor: CYAN_THEME,
     },
@@ -47,28 +50,28 @@ class IndexScreenContainer extends PureComponent {
 
   render() {
     return (
-      <ScrollView style={styles.container}>
+      <View>
+        <StatusBar barStyle="light-content"/>
         <ListingImage
           currentLocation={this.props.currentLocation}
           tourRequireImage={this.tourRequireImage}
         />
-        <Listing
-          currentLocation={this.props.currentLocation}
-          list={this.props.list}
-          tourRequireImage={this.tourRequireImage}
-          onPress={this.onPress}
-          tourId={this.props.tourId}
-          {...this.props}
-        />
-      </ScrollView>
+        <ScrollView >
+          <Listing
+            currentLocation={this.props.currentLocation}
+            list={this.props.list}
+            tourRequireImage={this.tourRequireImage}
+            onPress={this.onPress}
+            tourId={this.props.tourId}
+            {...this.props}
+          />
+        </ScrollView>
+      </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
   headerText: {
     fontSize: 30,
     fontWeight: 'bold',
