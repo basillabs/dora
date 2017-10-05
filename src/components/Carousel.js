@@ -16,7 +16,17 @@ class CarouselList extends PureComponent {
     navigation: PropTypes.object.isRequired,
   };
 
+  constructor(props) {
+    super(props);
+    this.debounceTime = 0;
+  }
+
   onPress = (index) => () => {
+    const currTime = new Date().getTime();
+    if (this.debounceTime + 1000 > currTime) {
+      return;
+    }
+    this.debounceTime = currTime;
     const {
       tourId,
       imageList,
