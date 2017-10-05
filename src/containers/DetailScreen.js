@@ -6,6 +6,7 @@ import {
   Text,
   TouchableHighlight,
   View,
+  StatusBar,
 } from 'react-native';
 import { Button } from 'react-native-elements';
 import { connect } from 'react-redux';
@@ -110,6 +111,7 @@ class DetailScreen extends PureComponent {
 
     return (
       <ScrollView contentContainerStyle={styles.container}>
+      <StatusBar barStyle="dark-content"/>
         <Card
           imageName={locationImage}
           tourId={tourId}

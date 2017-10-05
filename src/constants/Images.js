@@ -3,6 +3,8 @@ export function requireImage(tourId, imageName) {
   switch (tourId) {
     case 0:
       switch (imageName) {
+        case 'headerImage':
+          return require('../data/tours/tour_0/images/headerImage.png');
         case 'location_global':
           return require('../data/tours/tour_0/images/location_global.png');
         case 'location_0':
