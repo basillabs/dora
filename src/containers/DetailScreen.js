@@ -13,6 +13,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Card from '../components/Card';
 import CarouselList from '../components/Carousel';
+import TaskList from '../components/TaskList';
 import ToggleLocationButton from '../components/ToggleLocationButton';
 import { requireImage } from '../constants/Images';
 import SupportedMapsContainer from './SupportedMapsContainer';
@@ -80,6 +81,15 @@ class DetailScreen extends PureComponent {
     );
   }
 
+  renderTasks(tasks) {
+    if (!tasks) {
+      return null;
+    }
+    return (
+      <TaskList taskList={tasks} />
+    );
+  }
+
   renderDetails(details, tourId, navigation) {
     return details.map(detail => (
       <View
@@ -94,6 +104,11 @@ class DetailScreen extends PureComponent {
           {detail.text}
         </Text>
         {this.renderCarousel(detail.carousel, tourId, navigation)}
+        <Text style={styles.title}>
+          Tasks
+        </Text>
+        <View style={styles.halfBorder} />
+        {this.renderTasks(detail.tasks)}
       </View>
     ));
   }
