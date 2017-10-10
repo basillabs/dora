@@ -64,10 +64,6 @@ function renderDetails(details, tourId, navigation) {
         {detail.text}
       </Text>
       {renderCarousel(detail.carousel, tourId, navigation)}
-      <Text style={styles.title}>
-        Tasks
-      </Text>
-      <View style={styles.halfBorder} />
       {renderTasks(detail.tasks)}
     </View>
   ));
