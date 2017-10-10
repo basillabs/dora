@@ -16,9 +16,9 @@ class TaskList extends PureComponent {
   };
 
   renderTasks(taskList) {
-    return taskList.map(function(task) {
+    return taskList.map(function(task, i) {
       return (
-          <Text style={styles.text}>
+          <Text key={i} style={styles.text}>
             {task}
           </Text>
         )
