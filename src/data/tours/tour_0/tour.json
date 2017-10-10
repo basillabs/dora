@@ -57,7 +57,10 @@
         },
         {
           "title": "Tasks",
-          "text": "30 min: Hike to the top of Mt. Davidson\n1 hours: Pray and meditate on God’s heart for San Francisco\n"
+          "tasks": [
+            "30 min: Hike to the top of Mt. Davidson",
+            "1 hours: Pray and meditate on God’s heart for San Francisco"
+          ]
         }
       ]
     },
@@ -85,7 +88,11 @@
         },
         {
           "title": "Tasks",
-          "text": "30 min: Walk Castro street and learn about this historical and culturally powerful neighborhood\n1 hour: Eat lunch in the Castro\n30 min: Head over the Hot Cookie, one of the most famous cookie spots in the Castro, and try a cookie there for dessert.\n"
+          "tasks": [
+            "30 min: Walk Castro street and learn about this historical and culturally powerful neighborhood",
+            "1 hour: Eat lunch in the Castro",
+            "30 min: Head over the Hot Cookie, one of the most famous cookie spots in the Castro, and try a cookie there for dessert."
+          ]
         }
       ]
     },
@@ -112,10 +119,13 @@
         },
         {
           "title": "Tasks",
-          "text": "1 hour: Spend time with the staff at Homeless Youth Alliance and get to know their work\n3 hours: Join HYA on one of their outreaches to homeless youth"
+          "tasks": [
+            "1 hour: Spend time with the staff at Homeless Youth Alliance and get to know their work",
+            "3 hours: Join HYA on one of their outreaches to homeless youth"
+          ]
         }
       ]
-    },   
+    },
     {
       "id": 4,
       "name": "City Hall",
@@ -139,7 +149,10 @@
         },
         {
           "title": "Tasks",
-          "text": "1 hour: Explore City Hall and take note of any spiritual insights God may be giving you here\n1 hour: Explore the areas around City Hall and gather together to pray for all the politicians and government workers here."
+          "tasks": [
+            "1 hour: Explore City Hall and take note of any spiritual insights God may be giving you here",
+            "1 hour: Explore the areas around City Hall and gather together to pray for all the politicians and government workers here."
+          ]
         }
       ]
     },
@@ -167,10 +180,14 @@
         },
         {
           "title": "Tasks",
-          "text": "1 hour: Meet and talk to Paula Farmer, the leader of Glide’s PRIDE team. Learn about how this particular church views the place of the gospel as it intersects with culture\n\n1 hour: Volunteer at Glide’s famous food kitchen and get to know the people of the Tenderloin\n\n30 min: Go on a prayer walk around the Tenderloin and pray for the community"
+          "tasks": [
+            "1 hour: Meet and talk to Paula Farmer, the leader of Glide’s PRIDE team. Learn about how this particular church views the place of the gospel as it intersects with culture",
+            "1 hour: Volunteer at Glide’s famous food kitchen and get to know the people of the Tenderloin",
+            "30 min: Go on a prayer walk around the Tenderloin and pray for the community"
+          ]
         }
       ]
-    },    
+    },
     {
       "id": 6,
       "name": "Cathedral of Saint Mary of the Assumption",
@@ -194,7 +211,10 @@
         },
         {
           "title": "Tasks",
-          "text": "30 minutes: Tour the cathedral\n30 minutes: Observe the open windows and pray for SF and the need to work for the Kingdom of God on earth"
+          "tasks": [
+            "30 minutes: Tour the cathedral",
+            "30 minutes: Observe the open windows and pray for SF and the need to work for the Kingdom of God on earth"
+          ]
         }
       ]
     },
@@ -218,7 +238,10 @@
         },
         {
           "title": "Tasks",
-          "text": "1 hour: Hike from Sutro Baths to Lands End\n\n30 minutes: Prayer walk through the Labyrinth path"
+          "tasks": [
+            "1 hour: Hike from Sutro Baths to Lands End",
+            "30 minutes: Prayer walk through the Labyrinth path"
+          ]
         }
       ]
     }
