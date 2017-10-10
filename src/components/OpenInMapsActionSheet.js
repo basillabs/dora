@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { View, Text, StyleSheet, Modal, ListView } from 'react-native';
+import { View } from 'react-native';
 import ActionSheet from 'react-native-actionsheet';
 
 export default class OpenInMapsActionSheet extends Component {
@@ -22,18 +22,11 @@ export default class OpenInMapsActionSheet extends Component {
     this.cancelIndex = props.apps.length;
   }
 
-  handlePress = (index) => {
-    this.props.onPress(index);
-  }
 
   componentDidMount() {
     if (this.props.open && this.actionSheet) {
       this.actionSheet.show();
     }
-  }
-
-  componentWillUnmount() {
-    this.actionSheet = null;
   }
 
   componentWillReceiveProps(nextProps) {
@@ -43,11 +36,18 @@ export default class OpenInMapsActionSheet extends Component {
     }
   }
 
-  getOptions = () => {
-    return [
+  componentWillUnmount() {
+    this.actionSheet = null;
+  }
+
+  getOptions = () =>
+    [
       ...this.props.apps,
       'Cancel',
     ];
+
+  handlePress = (index) => {
+    this.props.onPress(index);
   }
 
   render() {
@@ -58,7 +58,7 @@ export default class OpenInMapsActionSheet extends Component {
     return (
       <View>
         <ActionSheet
-          ref={(o) => {this.actionSheet = o}}
+          ref={(o) => { this.actionSheet = o; }}
           cancelButtonIndex={this.cancelIndex}
           title={this.props.title}
           options={this.getOptions()}

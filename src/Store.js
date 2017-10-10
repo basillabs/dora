@@ -9,13 +9,13 @@ const finalCreateStore = compose(
   applyMiddleware(
     ReduxThunk,
   ),
-  autoRehydrate()
+  autoRehydrate(),
 )(createStore);
 
 const configureStore = (initialState) => {
   const store = finalCreateStore(reducers, initialState);
-  persistStore(store, {storage: AsyncStorage});
+  persistStore(store, { storage: AsyncStorage });
   return store;
-}
+};
 
 export default configureStore;

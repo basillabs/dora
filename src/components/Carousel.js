@@ -21,16 +21,20 @@ class CarouselList extends PureComponent {
     this.debounceTime = 0;
   }
 
-  onPress = (index) => () => {
+  onPress = index => () => {
     const currTime = new Date().getTime();
+
     if (this.debounceTime + 1000 > currTime) {
       return;
     }
+
     this.debounceTime = currTime;
+
     const {
       tourId,
       imageList,
     } = this.props;
+
     this.props.navigation.navigate('Lightbox', {
       tourId,
       imageList,
@@ -43,12 +47,11 @@ class CarouselList extends PureComponent {
       tourId,
       imageList,
     } = this.props;
-    const renderItems = imageList.map((image, i) => {
-        return {
-            key: i,
-            image: image,
-        };
-    });
+
+    const renderItems = imageList.map((image, i) => ({
+      key: i,
+      image,
+    }));
 
     return (
       <FlatList

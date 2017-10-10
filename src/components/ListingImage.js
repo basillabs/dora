@@ -4,7 +4,6 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import { Tile } from 'react-native-elements';
 import { requireImage } from '../constants/Images';
 
 export default class ListingImage extends PureComponent {

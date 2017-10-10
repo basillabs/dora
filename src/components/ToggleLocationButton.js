@@ -1,18 +1,30 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, TouchableWithoutFeedback, View, Text } from 'react-native';
-import { Tile } from 'react-native-elements';
-import { requireImage } from '../constants/Images';
 import {
   CYAN_THEME,
-  WHITE_BACKGROUND,
   GREY_BUTTON,
 } from '../constants/colorConstants';
 
 export default class ToggleLocationButton extends PureComponent {
+  static propTypes = {
+    toggleLocation: PropTypes.func.isRequired,
+    navigation: PropTypes.object.isRequired,
+  };
+
   constructor(props) {
     super(props);
     this.toggleLocation = this.toggleLocation.bind(this);
+  }
+
+  getButtonColor() {
+    const isComplete = this.props.list[this.props.locationId].completed;
+    return isComplete ? styles.disabled : styles.enabled;
+  }
+
+  toggleLocation() {
+    this.props.toggleLocation(this.props.locationId);
+    this.props.navigation.goBack();
   }
 
   render() {
@@ -28,22 +40,12 @@ export default class ToggleLocationButton extends PureComponent {
       </View>
     );
   }
-
-  getButtonColor() {
-    const isComplete = this.props.list[this.props.locationId].completed;
-    return isComplete ? styles.disabled : styles.enabled;
-  }
-
-  toggleLocation() {
-    this.props.toggleLocation(this.props.locationId);
-    this.props.navigation.goBack();
-  }
 }
 
 ToggleLocationButton.propTypes = {
   locationId: React.PropTypes.number.isRequired,
   list: React.PropTypes.array.isRequired,
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -54,8 +56,11 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: '20%',
     borderRadius: 5,
-    shadowColor: "#000",
-    shadowOffset: {width: 1, height: 1},
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 1,
+      height: 1,
+    },
     shadowOpacity: 0.25,
   },
   disabled: {
@@ -67,5 +72,5 @@ const styles = StyleSheet.create({
   text: {
     color: '#FFFFFF',
     textAlign: 'center',
-  }
+  },
 });

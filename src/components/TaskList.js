@@ -1,39 +1,33 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import {
   StyleSheet,
   Text,
   View,
 } from 'react-native';
+import PropTypes from 'prop-types';
 import {
   BLACK_MESSAGE,
 } from '../constants/colorConstants';
-import PropTypes from 'prop-types';
 
-class TaskList extends PureComponent {
-
-  static propTypes = {
-    taskList: PropTypes.array.isRequired,
-  };
-
-  renderTasks(taskList) {
-    return taskList.map(function(task, i) {
-      return (
-          <Text key={i} style={styles.text}>
-            {task}
-          </Text>
-        )
-    });
-  }
-
-
-  render() {
-    return (
-      <View style={styles.tasksContainer}>
-        {this.renderTasks(this.props.taskList)}
-      </View>
-    );
-  }
+function renderTasks(taskList) {
+  return taskList.map(task =>
+    <Text style={styles.text} key={task}>
+      {task}
+    </Text>,
+  );
 }
+
+function TaskList({ taskList }) {
+  return (
+    <View style={styles.tasksContainer}>
+      {renderTasks(taskList)}
+    </View>
+  );
+}
+TaskList.propTypes = {
+
+  taskList: PropTypes.array.isRequired,
+};
 
 const styles = StyleSheet.create({
   tasksContainer: {

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { View, StatusBar, ScrollView, StyleSheet, Text, Image } from 'react-native';
 import Listing from '../components/Listing';
 import ListingImage from '../components/ListingImage';
-import { setLocation } from '../actions/locationActions';
+import setLocation from '../actions/locationActions';
 import { requireImage } from '../constants/Images';
 import {
   CYAN_THEME,
@@ -18,7 +18,7 @@ const mapStateToProps = state => ({
 
 function mapDispatchToProps(dispatch) {
   return {
-    setLocation: (locationId) => dispatch(setLocation(locationId)),
+    setLocation: locationId => dispatch(setLocation(locationId)),
   };
 }
 
@@ -28,13 +28,15 @@ class IndexScreenContainer extends PureComponent {
     list: PropTypes.array.isRequired,
     currentLocation: PropTypes.number.isRequired,
     tourId: PropTypes.number.isRequired,
+    setLocation: PropTypes.func.isRequired,
   }
 
   static navigationOptions = () => ({
-    headerLeft: 
+    headerLeft: (
       <Image source={requireImage(0, 'headerImage')}>
         <Text style={styles.headerText}>San Francisco</Text>
-      </Image>,
+      </Image>
+    ),
     headerStyle: {
       backgroundColor: CYAN_THEME,
     },
@@ -51,7 +53,7 @@ class IndexScreenContainer extends PureComponent {
   render() {
     return (
       <View>
-        <StatusBar barStyle="light-content"/>
+        <StatusBar barStyle="light-content" />
         <ListingImage
           currentLocation={this.props.currentLocation}
           tourRequireImage={this.tourRequireImage}

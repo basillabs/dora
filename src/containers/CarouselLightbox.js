@@ -10,11 +10,14 @@ import { BLACK_BACKGROUND } from '../constants/colorConstants';
 import { requireImage } from '../constants/Images';
 
 class CarouselLightbox extends PureComponent {
+  static propTypes = {
+    navigation: PropTypes.object.isRequired,
+  };
 
   componentDidMount() {
     setTimeout(() => {
-      this._scrollView.scrollTo({
-        x: dim.width * this._initialIndex,
+      this.scrollView.scrollTo({
+        x: dim.width * this.initialIndex,
         y: 0,
         animated: false,
       });
@@ -27,20 +30,19 @@ class CarouselLightbox extends PureComponent {
       imageList,
       index,
     } = this.props.navigation.state.params;
-    this._initialIndex = index;
-    const imageElements = imageList.map((image, i) => {
-      return (
-        <Image
-          key={i}
-          source={requireImage(tourId, image)}
-          resizeMode={"contain"}
-          style={styles.image}
-        />
-      )
-    });
+
+    this.initialIndex = index;
+    const imageElements = imageList.map(image =>
+      <Image
+        key={`${image}`}
+        source={requireImage(tourId, image)}
+        resizeMode="contain"
+        style={styles.image}
+      />,
+    );
     return (
       <ScrollView
-        ref={scrollView => this._scrollView = scrollView}
+        ref={(scrollView) => { this.scrollView = scrollView; }}
         contentContainerStyle={styles.scrollContainer}
         horizontal
         pagingEnabled
@@ -65,7 +67,7 @@ const styles = StyleSheet.create({
   scrollContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-  }
+  },
 });
 
 export default CarouselLightbox;
