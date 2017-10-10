@@ -86,7 +86,11 @@ class DetailScreen extends PureComponent {
       return null;
     }
     return (
-      <TaskList taskList={tasks} />
+      <View>
+        <Text style={styles.title}>Tasks</Text>
+        <View style={styles.halfBorder} />
+        <TaskList taskList={tasks} />
+      </View>
     );
   }
 
@@ -104,10 +108,6 @@ class DetailScreen extends PureComponent {
           {detail.text}
         </Text>
         {this.renderCarousel(detail.carousel, tourId, navigation)}
-        <Text style={styles.title}>
-          Tasks
-        </Text>
-        <View style={styles.halfBorder} />
         {this.renderTasks(detail.tasks)}
       </View>
     ));
@@ -144,6 +144,7 @@ class DetailScreen extends PureComponent {
           open={this.state.displayingDirectionMenu}
           onClose={this.onDirectionsMenuClose}
         />
+        <View style={styles.marginUnderMap}/>
         <ToggleLocationButton {...this.props} />
       </ScrollView>
     );
@@ -180,9 +181,11 @@ const styles = StyleSheet.create({
     margin: 20,
   },
   directionsButton: {
-    marginBottom: 20,
     width: '100%',
     height: 150,
+  },
+  marginUnderMap: {
+    marginBottom: 20,
   },
 });
 
