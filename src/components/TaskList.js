@@ -20,7 +20,7 @@ class TaskList extends PureComponent {
       return (
           <Text style={styles.text}>
             {task}
-          </Text>        
+          </Text>
         )
     });
   }
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     color: BLACK_MESSAGE,
     fontSize: 16,
     lineHeight: 20,
-    margin: 20,
+    margin: 10,
   },
 });
 

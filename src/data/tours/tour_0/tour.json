@@ -53,11 +53,11 @@
           "carousel": [
             "davidson1",
             "davidson2"
+          ],
+          "tasks": [
+            "30 min: Hike to the top of Mt. Davidson",
+            "1 hour: Pray and meditate on God’s heart for San Francisco"
           ]
-        },
-        {
-          "title": "Tasks",
-          "text": "30 min: Hike to the top of Mt. Davidson\n1 hours: Pray and meditate on God’s heart for San Francisco\n"
         }
       ]
     },
@@ -81,11 +81,12 @@
           "carousel": [
             "castro1",
             "castro2"
+          ],
+          "tasks": [
+            "30 min: Walk Castro street and learn about this historical and culturally powerful neighborhood",
+            "1 hour: Eat lunch in the Castro",
+            "30 min: Head over the Hot Cookie, one of the most famous cookie spots in the Castro, and try a cookie there for dessert."
           ]
-        },
-        {
-          "title": "Tasks",
-          "text": "30 min: Walk Castro street and learn about this historical and culturally powerful neighborhood\n1 hour: Eat lunch in the Castro\n30 min: Head over the Hot Cookie, one of the most famous cookie spots in the Castro, and try a cookie there for dessert.\n"
         }
       ]
     },
@@ -108,14 +109,14 @@
           "text": "In 1992, the City of San Francisco commissioned a study of homeless youth in the Haight Ashbury district. This study demonstrated that homeless young people have a high incidence of health and psychological problems as well as a lack of access to health and human services. In response, coordinated efforts to reach these youth began springing up in the Haight. Two such efforts were the San Francisco Needle Exchange (SFNE) and the Haight Ashbury Youth Outreach Team (HAYOT). It was with HAYOT that Mary Howe, a formerly homeless youth herself, began to work with youth in the neighborhood.\n\nIn 2006, seven years after Mary first got involved, she merged the two organizations to form Homeless Youth Alliance: the city’s only grassroots harm reduction coalition designed by and for the marginalized and underserved youth experiencing homelessness of the Haight Ashbury district. Mary along side dedicated staff and the youth we work with has shaped and built an agency that reaches 13,000 at-risk youth annually, providing a drop-in center, harm reduction education, and medical and mental health services. HYA is the only youth-focused agency in San Francisco whose staff mirrors the target population it serves: most of the agency’s 14 staff and 30 volunteers have histories that include homelessness, many of whom utilized HYA’s services while living on the street. HYA trains constituents to be peer educators, helping them transcend the conditioned passivity and powerlessness that lead to self-destructive choices. As a result, many former participants have gone on to pursue careers in human services and counseling.",
           "carousel": [
             "hya1"
+          ],
+          "tasks": [
+            "1 hour: Spend time with the staff at Homeless Youth Alliance and get to know their work",
+            "3 hours: Join HYA on one of their outreaches to homeless youth"
           ]
-        },
-        {
-          "title": "Tasks",
-          "text": "1 hour: Spend time with the staff at Homeless Youth Alliance and get to know their work\n3 hours: Join HYA on one of their outreaches to homeless youth"
         }
       ]
-    },   
+    },
     {
       "id": 4,
       "name": "City Hall",
@@ -135,11 +136,11 @@
           "text": "City Hall represents the political and cultural power structures of San Francisco.\n\nThe City Hall you see today took two years to build. Steel, granite, and four floors of white marble interiors make up San Francisco's symbol of resilience, built after the previous City Hall was destroyed in the Great Earthquake and Fire of April 18, 1906.\n\nCivic leaders were determined to demonstrate the city's rebirth in time for the start of the World's Fair of 1915. Designed by architect Arthur Brown, Jr. and begun in 1913, natives and the world were suitably awed by the gilt exterior detailing, the sweeping grand staircase, and the massive dome. At 307 feet in height, the dome is a full 42 feet taller than the dome of the nation's capitol.\n\nDuring the past century, the building has seen major political upheavals and demographic shifts in the makeup of its legislators. City Hall is often a focus of drama: the tragic assassinations of 1979; and jubilation, when same-sex marriages were first performed in 2004. Once the repository of records and a site for smaller courts, current debates and decisions about labor, land use, and public policy issues take place inside on a regular basis.",
           "carousel": [
             "sfch1"
+          ],
+          "tasks": [
+            "1 hour: Explore City Hall and take note of any spiritual insights God may be giving you here",
+            "1 hour: Explore the areas around City Hall and gather together to pray for all the politicians and government workers here."
           ]
-        },
-        {
-          "title": "Tasks",
-          "text": "1 hour: Explore City Hall and take note of any spiritual insights God may be giving you here\n1 hour: Explore the areas around City Hall and gather together to pray for all the politicians and government workers here."
         }
       ]
     },
@@ -163,14 +164,15 @@
           "carousel": [
             "glide1",
             "glide2"
+          ],
+          "tasks": [
+            "1 hour: Meet and talk to Paula Farmer, the leader of Glide’s PRIDE team. Learn about how this particular church views the place of the gospel as it intersects with culture",
+            "1 hour: Volunteer at Glide’s famous food kitchen and get to know the people of the Tenderloin",
+            "30 min: Go on a prayer walk around the Tenderloin and pray for the community"
           ]
-        },
-        {
-          "title": "Tasks",
-          "text": "1 hour: Meet and talk to Paula Farmer, the leader of Glide’s PRIDE team. Learn about how this particular church views the place of the gospel as it intersects with culture\n\n1 hour: Volunteer at Glide’s famous food kitchen and get to know the people of the Tenderloin\n\n30 min: Go on a prayer walk around the Tenderloin and pray for the community"
         }
       ]
-    },    
+    },
     {
       "id": 6,
       "name": "Cathedral of Saint Mary of the Assumption",
@@ -190,11 +192,11 @@
           "text": "The Cathedral of Saint Mary of the Assumption, also known as Saint Mary’s Cathedral, is a church part of the Roman Catholic Archdiocese of San Francisco. Known to be a sacred place where ancient faith and modern technology intertwine, Saint Mary’s is a popular destination for both those interested in faith and those interested in design/architecture.\n\nThe Cathedral of St. Mary of the Assumption is an artistic and architectural poem evocative of the union between heaven and earth attained for us in Jesus Christ. The balance and simplicity of modern engineering echo the union of human and divine in creation and life. Faith and art combine to create in our contemporary world a worthy heir to the beautiful churches of the past.\n\nThe cathedral’s saddle roof is composed of eight segments of hyperbolic paraboloids, in such a fashion that the bottom horizontal cross section of the roof is a square and the top cross section is a cross. Like the Cross itself, St. Mary's Cathedral moves us both vertically and horizontally. As ones eyes are drawn upward in the graceful sweep of the cupola, hearts are lifted up to God.",
           "carousel": [
             "cathedral1"
+          ],
+          "tasks": [
+            "30 minutes: Tour the cathedral",
+            "30 minutes: Observe the open windows and pray for SF and the need to work for the Kingdom of God on earth"
           ]
-        },
-        {
-          "title": "Tasks",
-          "text": "30 minutes: Tour the cathedral\n30 minutes: Observe the open windows and pray for SF and the need to work for the Kingdom of God on earth"
         }
       ]
     },
@@ -214,11 +216,11 @@
       "details": [
         {
           "title": "Overview",
-          "text": "The Lands End Labyrinth was constructed by local artist Eduardo Aguilera, overlooking the Golden Gate Bridge. Although the labyrinth was destroyed, presumably by vandals, in August 2015, it was rebuilt a month later by the original artist with the help of 50 volunteers. From here, the views of the Golden Gate Bridge are outstanding from this vantage point."
-        },
-        {
-          "title": "Tasks",
-          "text": "1 hour: Hike from Sutro Baths to Lands End\n\n30 minutes: Prayer walk through the Labyrinth path"
+          "text": "The Land",
+          "tasks": [
+            "1 hour: Hike from Sutro Baths to Lands End",
+            "30 minutes: Prayer walk through the Labyrinth path"
+          ]
         }
       ]
     }
