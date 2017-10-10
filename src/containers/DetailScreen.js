@@ -143,7 +143,7 @@ class DetailScreen extends PureComponent {
           open={this.state.displayingDirectionMenu}
           onClose={this.onDirectionsMenuClose}
         />
-        <View style={styles.marginUnderMap}/>
+        <View style={styles.marginUnderMap} />
         <ToggleLocationButton {...this.props} />
       </ScrollView>
     );
