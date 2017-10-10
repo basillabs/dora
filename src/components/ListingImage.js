@@ -29,6 +29,6 @@ export default class ListingImage extends PureComponent {
 const styles = StyleSheet.create({
   imageStyle: {
     width: '100%',
-    height: 200,
+    height: 182,
   },
 });
