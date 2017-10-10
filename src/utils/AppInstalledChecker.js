@@ -22,25 +22,22 @@ const mapApps = [
 ];
 
 function checkApps() {
-  return Promise.all(mapApps.map((map) => {
-    return new Promise((resolve) => {
-      Linking.canOpenURL(map.url)
-      .then(isInstalled => {
-        if (isInstalled) {
-          resolve(map);
-        } else {
-          resolve(false);
-        }
-      });
+  return Promise.all(mapApps.map(map => new Promise((resolve) => {
+    /* eslint prefer-arrow-callback: 0 */
+    Linking.canOpenURL(map.url).then(function resolver(isInstalled) {
+      if (isInstalled) {
+        resolve(map);
+      } else {
+        resolve(false);
+      }
     });
-  }));
+  }),
+  ));
 }
 
 export default class AppInstalledChecker {
   static getSupportedMapApps() {
-    return checkApps().then(values => {
-      return values.filter(e => !!e);
-    });
+    return checkApps().then(values => values.filter(e => !!e));
   }
 
   static open(url, address) {

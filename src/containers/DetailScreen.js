@@ -8,7 +8,6 @@ import {
   View,
   StatusBar,
 } from 'react-native';
-import { Button } from 'react-native-elements';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Card from '../components/Card';
@@ -23,7 +22,52 @@ import {
   CYAN_THEME,
   WHITE_BACKGROUND,
 } from '../constants/colorConstants';
-import { toggleLocation } from '../actions/locationListActions';
+import toggleLocation from '../actions/locationListActions';
+
+function renderCarousel(carousel, tourId, navigation) {
+  if (!carousel) {
+    return null;
+  }
+  return (
+    <CarouselList
+      tourId={tourId}
+      imageList={carousel}
+      navigation={navigation}
+    />
+  );
+}
+
+function renderTasks(tasks) {
+  if (!tasks) {
+    return null;
+  }
+  return (
+    <View>
+      <Text style={styles.title}>Tasks</Text>
+      <View style={styles.halfBorder} />
+      <TaskList taskList={tasks} />
+    </View>
+  );
+}
+
+function renderDetails(details, tourId, navigation) {
+  return details.map(detail => (
+    <View
+      key={detail.title}
+      style={styles.detailsContainer}
+    >
+      <Text style={styles.title}>
+        {detail.title}
+      </Text>
+      <View style={styles.halfBorder} />
+      <Text style={styles.text}>
+        {detail.text}
+      </Text>
+      {renderCarousel(detail.carousel, tourId, navigation)}
+      {renderTasks(detail.tasks)}
+    </View>
+  ));
+}
 
 function mapStateToProps(state) {
   return {
@@ -34,7 +78,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    toggleLocation: (locationId) => dispatch(toggleLocation(locationId)),
+    toggleLocation: locationId => dispatch(toggleLocation(locationId)),
   };
 }
 
@@ -68,51 +112,6 @@ class DetailScreen extends PureComponent {
     });
   }
 
-  renderCarousel(carousel, tourId, navigation) {
-    if (!carousel) {
-      return null;
-    }
-    return (
-      <CarouselList
-        tourId={tourId}
-        imageList={carousel}
-        navigation={navigation}
-      />
-    );
-  }
-
-  renderTasks(tasks) {
-    if (!tasks) {
-      return null;
-    }
-    return (
-      <View>
-        <Text style={styles.title}>Tasks</Text>
-        <View style={styles.halfBorder} />
-        <TaskList taskList={tasks} />
-      </View>
-    );
-  }
-
-  renderDetails(details, tourId, navigation) {
-    return details.map(detail => (
-      <View
-        key={detail.title}
-        style={styles.detailsContainer}
-      >
-        <Text style={styles.title}>
-          {detail.title}
-        </Text>
-        <View style={styles.halfBorder} />
-        <Text style={styles.text}>
-          {detail.text}
-        </Text>
-        {this.renderCarousel(detail.carousel, tourId, navigation)}
-        {this.renderTasks(detail.tasks)}
-      </View>
-    ));
-  }
-
   render() {
     const {
       details,
@@ -126,13 +125,13 @@ class DetailScreen extends PureComponent {
 
     return (
       <ScrollView contentContainerStyle={styles.container}>
-      <StatusBar barStyle="dark-content"/>
+        <StatusBar barStyle="dark-content" />
         <Card
           imageName={locationImage}
           tourId={tourId}
           title={name}
         />
-        {this.renderDetails(details, tourId, this.props.navigation)}
+        {renderDetails(details, tourId, this.props.navigation)}
         <TouchableHighlight onPress={this.onDirectionsPress}>
           <Image
             style={styles.directionsButton}
@@ -144,7 +143,7 @@ class DetailScreen extends PureComponent {
           open={this.state.displayingDirectionMenu}
           onClose={this.onDirectionsMenuClose}
         />
-        <View style={styles.marginUnderMap}/>
+        <View style={styles.marginUnderMap} />
         <ToggleLocationButton {...this.props} />
       </ScrollView>
     );

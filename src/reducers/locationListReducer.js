@@ -7,6 +7,18 @@ const defaultState = {
   locations: [],
 };
 
+function toggleLocation(locations, locationId) {
+  return locations.map((location, index) => {
+    if (index === locationId) {
+      return {
+        ...location,
+        completed: !location.completed,
+      };
+    }
+    return location;
+  });
+}
+
 export default function (state = defaultState, action = {}) {
   switch (action.type) {
     case SET_TOUR:
@@ -16,18 +28,9 @@ export default function (state = defaultState, action = {}) {
       };
 
     case TOGGLE_LOCATION:
-      var updatedLocations = state.locations.map((location, index) => {
-        if (index === action.locationId) {
-          return {
-            ...location,
-            completed: !location.completed,
-          };
-        }
-        return location;
-      });
       return {
         ...state,
-        locations: updatedLocations,
+        locations: toggleLocation(state.locations, action.locationId),
       };
     default:
       return state;

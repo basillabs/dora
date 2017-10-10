@@ -1,14 +1,13 @@
 import React, { PureComponent, PropTypes } from 'react';
 import { FlatList, StyleSheet } from 'react-native';
+import { ListItem } from 'react-native-elements';
 import { CYAN_THEME } from '../constants/colorConstants';
-import { List, ListItem, Avatar } from 'react-native-elements';
 import { requireImage } from '../constants/Images';
 
 export default class Listing extends PureComponent {
   static propTypes = {
     onPress: PropTypes.func.isRequired,
     list: PropTypes.array.isRequired,
-    currentLocation: PropTypes.number.isRequired,
     tourId: PropTypes.number.isRequired,
   };
 
@@ -33,7 +32,7 @@ export default class Listing extends PureComponent {
             avatarStyle={styles.avatarStyle}
             title={item.name}
             titleStyle={styles.titleStyle}
-            rightTitle={item.completed ? "Complete" : null}
+            rightTitle={item.completed ? 'Complete' : null}
             rightTitleStyle={styles.complete}
             subtitle={item.short_address}
             subtitleStyle={styles.subtitleStyle}
@@ -79,5 +78,5 @@ const styles = StyleSheet.create({
   complete: {
     color: CYAN_THEME,
     fontWeight: 'bold',
-  }
+  },
 });
