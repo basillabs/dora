@@ -52,13 +52,17 @@ class IndexScreenContainer extends PureComponent {
 
   render() {
     return (
-      <View>
+      <View style={styles.container}>
         <StatusBar barStyle="light-content" />
         <ListingImage
           currentLocation={this.props.currentLocation}
           tourRequireImage={this.tourRequireImage}
         />
-        <ScrollView >
+        <ScrollView
+          snapToInterval={81} 
+          snapToAlignment="start"
+          bounces={false}
+        >
           <Listing
             currentLocation={this.props.currentLocation}
             list={this.props.list}
@@ -74,6 +78,9 @@ class IndexScreenContainer extends PureComponent {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   headerText: {
     fontSize: 30,
     fontWeight: 'bold',
